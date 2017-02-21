@@ -11,7 +11,8 @@ public class SelectSort {
 			for(int i = 0; i < num; i++){
 				a[i] = scanner.nextInt();
 			}
-			System.out.println(a.length);
+			selectSort(a);
+//			System.out.println(a.length);
 			for(int i = 0; i < num; i++){
 				if(i == num - 1){
 					System.out.print(a[i]);
