@@ -2,7 +2,8 @@ package Sort;
 
 import java.util.Scanner;
 
-public class BubbleSort {
+public class BubbleSort{
+	
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
 		int num = s.nextInt();
@@ -19,8 +20,8 @@ public class BubbleSort {
 			System.out.print(a[i] + " ");
 		}
 	}
-
-	private static void bubbleSort(int[] a) {
+	
+	public static void bubbleSort(int[] a) {
 		if(a == null || a.length == 0){
 			return;
 		}
