@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Interview4 {
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
-		char[] a = new char[1000];
+		char[] a = new char[10000];
 		a = s.nextLine().toCharArray();
 		replaceBlank(a, 1000);
 		System.out.println(a);
