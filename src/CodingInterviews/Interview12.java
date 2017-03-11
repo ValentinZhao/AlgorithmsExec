@@ -1,10 +1,17 @@
 package CodingInterviews;
 
+import java.util.Scanner;
+
 /**
  * 打印1到最大的n位数
  *
  */
 public class Interview12 {
+	public static void main(String[] args){
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		print1toMaxOfDigits(n);
+	}
 	
 	public static void print1toMaxOfDigits(int n){
 		if(n <= 0){
@@ -38,7 +45,7 @@ public class Interview12 {
 				isInitWith0 = false;
 			}
 			if(!isInitWith0){
-				System.out.print(number[i]);
+				System.out.println(number[i]);
 			}
 		}
 	}
