@@ -8,7 +8,7 @@ package CodingInterviews;
 /**			0, n=1
  * f(n,m)={
  *			[f(n-1,m)+m]%n, n>1
- */
+ */	
 public class Interview45 {
 	public static int lastRemaining(int n, int m){
 		if(n < 1 || m < 1){
