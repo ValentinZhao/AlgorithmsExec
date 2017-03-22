@@ -6,6 +6,9 @@ package CodingInterviews;
  */
 public class Interview27 {
 	static class BinaryTreeNode{
+		public BinaryTreeNode(Integer valueOf) {
+			this.value = valueOf;
+		}
 		int value;
 		BinaryTreeNode left;
 		BinaryTreeNode right;
