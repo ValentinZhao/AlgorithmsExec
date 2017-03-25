@@ -7,7 +7,7 @@ public class LongestDistance {
 			int min = A[0];
 			for(int i = 1; i < n; i++){
 				if(A[i] - min > dis){
-					dis = A[i] = min;
+					dis = A[i] - min;
 				}
 				if(min > A[i]){
 					min = A[i];
