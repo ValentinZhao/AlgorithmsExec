@@ -29,6 +29,9 @@ public class Solution {
         TreeLinkNode p = nextDummyHead;
         while (curP != null) {
             if (curP.left != null) {
+                // 这一行十分重要，它使得p向下移动了一行
+                // 因为一开始p是任意创建的node，p.next直接指向了cur.left的话，cur一开始是root
+                // 那么这就把p直接放在了cur.left的左侧，也就是 下一层最左节点的左边
                 p.next = curP.left;
                 p = p.next;
             }
@@ -40,6 +43,8 @@ public class Solution {
                 curP = curP.next;
             }
             else {
+                // p到最后就是指向了那一层最后一位，所以当这层遍历之后要把p更新到下一层
+                // p到dummyHead使用引用传递
                 curP = nextDummyHead.next;
                 nextDummyHead.next = null;
                 p = nextDummyHead;
