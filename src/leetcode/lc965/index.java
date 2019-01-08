@@ -1,3 +1,5 @@
+import javax.swing.tree.TreeNode;
+
 /**
  * Description:
  * A binary tree is univalued if every node in the tree has the same value.
@@ -11,7 +13,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+class Solution674 {
     public boolean isUnivalTree(TreeNode root) {
         boolean isLeftValid = (root.left == null || (root.val == root.left.val &&                                              isUnivalTree(root.left)));
         boolean isRightValid = (root.right == null || (root.val == root.right.val &&

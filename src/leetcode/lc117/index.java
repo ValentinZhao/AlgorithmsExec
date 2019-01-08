@@ -21,7 +21,7 @@
  *     TreeLinkNode(int x) { val = x; }
  * }
  */
-public class Solution {
+public class Solution117 {
     public void connect(TreeLinkNode root) {
         if (root == null) return;
         TreeLinkNode curP = root;

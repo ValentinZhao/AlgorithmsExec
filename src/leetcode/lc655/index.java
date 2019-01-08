@@ -1,3 +1,6 @@
+import javax.swing.tree.TreeNode;
+import java.util.ArrayList;
+
 /**
  * Print a binary tree in an m*n 2D string array following these rules:
  *
@@ -48,7 +51,7 @@
  *  ["4", "",  "", "",  "", "", "", "",  "",  "",  "",  "",  "", "", ""]]
  * Note: The height of binary tree is in the range of [1, 10].
  */
-class Solution {
+class Solution655 {
     public List<List<String>> printTree(TreeNode root) {
         List<List<String>> res = new ArrayList();
         int height = 1;
