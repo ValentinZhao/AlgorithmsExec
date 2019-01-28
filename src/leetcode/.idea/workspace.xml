@@ -62,11 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lc238/Solution238.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="240">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lc088/Solution088.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="12" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -123,6 +132,7 @@
         <option value="$PROJECT_DIR$/lc008/Solution008.java" />
         <option value="$PROJECT_DIR$/lc012/Solution012.java" />
         <option value="$PROJECT_DIR$/lc238/Solution238.java" />
+        <option value="$PROJECT_DIR$/lc088/Solution088.java" />
       </list>
     </option>
   </component>
@@ -232,6 +242,11 @@
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
               <item name="lc056" type="462c0819:PsiDirectoryNode" />
               <item name="Solution056.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="lc088" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
@@ -726,8 +741,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lc238/Solution238.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lc088/Solution088.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
