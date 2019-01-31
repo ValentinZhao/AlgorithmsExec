@@ -26,3 +26,9 @@ class Solution412 {
         return res;
     }
 }
+
+0 1 2 4 5 6 7
+
+6 7 0 1 2 4 5
+
+4 5 6 7 0 1 2
