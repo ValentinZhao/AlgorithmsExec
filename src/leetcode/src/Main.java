@@ -30,5 +30,8 @@ public class Main {
 //            res = res.next;
 //        }
 //        System.out.println(res.val);
+        int[] ca = new int[]{1,2,3,4};
+        String keyStr = String.valueOf(ca);
+        System.out.println("Output =====> " + keyStr);
     }
 }
