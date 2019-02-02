@@ -12,7 +12,7 @@ class Solution031 {
         int n = nums.length;
         if (n < 2) return;
         int index = n - 1;
-        while (nums[index] <= nums[index - 1]) {
+        while (index > 0) {
             if (nums[index] > nums[index - 1]) break;
             index--;
         }
