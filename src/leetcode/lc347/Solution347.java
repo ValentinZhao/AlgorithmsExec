@@ -13,7 +13,7 @@ public class Solution347 {
     public List<Integer> topKFrequent(int[] nums, int k) {
         if (nums == null || nums.length == 0) return new ArrayList<>();
         Map<Integer, Integer> map = new HashMap<>();
-        List<Integer> map = new ArrayList<>();
+        List<Integer> bucket = new ArrayList<>();
         for (int n : nums) {
             map.put(n, map.getOrDefault(n, 0) + 1);
         }
