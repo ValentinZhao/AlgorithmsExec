@@ -2,14 +2,14 @@ package src;
 
 
 import lc002.Solution002.ListNode;
-import lc053.Solution053;
+import lc026.Solution026;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main (String[] args) {
-        Solution053 solution = new Solution053();
-        int[] data = new int[]{-2,1,-3,4,-1,2,1,-5,4};
+        Solution026 solution = new Solution026();
+        int[] data = new int[]{0,0,1,1,1,1,2,2,3};
         String[] str_arr = new String[]{"abb", "bab", "abbb", "cvv"};
         Arrays.sort(str_arr);
         int test_int = 2356324;
@@ -20,18 +20,18 @@ public class Main {
         l2.next = new ListNode(9);
         l2.next.next = new ListNode(8);
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.maxSubArray(data);
+        int result = solution.removeDuplicates(data);
         System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + test_int);
         System.out.println("Output =====> " + result);
-        System.out.println(Arrays.toString(str_arr));
+//        System.out.println(Arrays.toString(str_arr));
 //        while (res.next != null) {
 //            System.out.println(res.val);
 //            res = res.next;
 //        }
 //        System.out.println(res.val);
-        int[] ca = new int[]{1,2,3,4};
-        String keyStr = String.valueOf(ca);
-        System.out.println("Output =====> " + keyStr);
+//        int[] ca = new int[]{1,2,3,4};
+//        String keyStr = String.valueOf(ca);
+//        System.out.println("Output =====> " + keyStr);
     }
 }
