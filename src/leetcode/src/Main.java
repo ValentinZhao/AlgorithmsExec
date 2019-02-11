@@ -2,14 +2,14 @@ package src;
 
 
 import lc002.Solution002.ListNode;
-import lc026.Solution026;
+import lc136.Solution136;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main (String[] args) {
-        Solution026 solution = new Solution026();
-        int[] data = new int[]{0,0,1,1,1,1,2,2,3};
+        Solution136 solution = new Solution136();
+        int[] data = new int[]{4,1,2,1,2};
         String[] str_arr = new String[]{"abb", "bab", "abbb", "cvv"};
         Arrays.sort(str_arr);
         int test_int = 2356324;
@@ -20,7 +20,7 @@ public class Main {
         l2.next = new ListNode(9);
         l2.next.next = new ListNode(8);
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.removeDuplicates(data);
+        int result = solution.singleNumber(data);
         System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + test_int);
         System.out.println("Output =====> " + result);
