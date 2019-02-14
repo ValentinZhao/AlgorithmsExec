@@ -2,14 +2,15 @@ package src;
 
 
 import lc002.Solution002.ListNode;
-import lc136.Solution136;
+import lc046.Solution046;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
-        Solution136 solution = new Solution136();
-        int[] data = new int[]{4,1,2,1,2};
+        Solution046 solution = new Solution046();
+        int[] data = new int[]{1,2,3};
         String[] str_arr = new String[]{"abb", "bab", "abbb", "cvv"};
         Arrays.sort(str_arr);
         int test_int = 2356324;
@@ -20,7 +21,7 @@ public class Main {
         l2.next = new ListNode(9);
         l2.next.next = new ListNode(8);
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.singleNumber(data);
+        List<List<Integer>> result = solution.permute(data);
         System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + test_int);
         System.out.println("Output =====> " + result);
