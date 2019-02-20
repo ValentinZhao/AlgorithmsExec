@@ -30,7 +30,7 @@ public class Solution133 {
         UndirectedGraphNode clone = new UndirectedGraphNode(node.label);
         map.put(clone.label, clone);
         LinkedList<UndirectedGraphNode> queue = new LinkedList<>();
-        queue.offer(clone);
+        queue.offer(node);
         while (!queue.isEmpty()) {
             UndirectedGraphNode cur = queue.pop();
             for (UndirectedGraphNode neighbor : cur.neighbors) {
