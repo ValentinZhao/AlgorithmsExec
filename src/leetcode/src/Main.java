@@ -2,13 +2,13 @@ package src;
 
 
 import lc002.Solution002.ListNode;
-import lc300.Solution300;
+import lc125.Solution125;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main (String[] args) {
-        Solution300 solution = new Solution300();
+        Solution125 solution = new Solution125();
         int[] data = new int[]{10,9,2,5,3,7,101,18};
         String[] str_arr = new String[]{"abb", "bab", "abbb", "cvv"};
         Arrays.sort(str_arr);
@@ -20,8 +20,8 @@ public class Main {
         l2.next = new ListNode(9);
         l2.next.next = new ListNode(8);
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.lengthOfLIS(data);
-        System.out.println("Input =====> " + Arrays.toString(data));
+        boolean result = solution.isPalindrome("A man, a plan, a canal: Panama");
+//        System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + test_int);
         System.out.println("Output =====> " + result);
 //        while (res.next != null) {
