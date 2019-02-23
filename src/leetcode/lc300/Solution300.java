@@ -18,9 +18,10 @@ package lc300;
  * 也就是说，3出现在了5后面，此时增长序列不再增长，而是通过二分查找找到离这个3最近的值，并且用3把它替换掉，这样新序列[2,3]比[2,5]更加紧凑
  * 紧凑的目的在于，如果后面出现了3和5之间的数，比如原序列中是这样的[...2,3,5,4...]那么，这个4其实是需要被插入增长序列的，因为[2,3,4]嘛，但是
  * 如果你不更新这个增长序列，还是[2,5]的话，4就插不进来，因为我们比较插不插入递增序列就是单纯用nums[i]和增长序列最后一位（毕竟是最大值）来比较
+ * 所以你得保证递增序列的最大值并不会很大，粒度很小才能保证把后面的递增的数完整的保存下来
  */
 public class Solution300 {
-    public int lengthOfLIS(int[] nums) {
+    public int lengthOfLongestIncreasingSubsequence(int[] nums) {
         int[] increasingSeq = new int[nums.length];
         int len = 0;
         increasingSeq[len++] = nums[0];
