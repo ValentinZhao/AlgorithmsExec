@@ -16,7 +16,7 @@ public class Solution322 {
         }
         return dp[amount] == 0x7fff_fffe ? -1 : dp[amount];
     }
-    
+
     public int coinChange2(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
         for (int i = 1; i <= amount; i++) {
