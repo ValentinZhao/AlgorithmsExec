@@ -3,29 +3,26 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc173.Solution173;
+import lc041.Solution041;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main (String[] args) {
-        TreeNode root = generateSampleTreeNode();
-        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        int[] data = new int[]{10,9,2,5,3,7,101,18};
-        String[] str_arr = new String[]{"abb", "bab", "abbb", "cvv"};
-        Arrays.sort(str_arr);
+//        TreeNode root = generateSampleTreeNode();
+//        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
+        Solution041 solution = new Solution041();
+        int[] data = new int[]{3,4,-1,1};
+//        String[] str_arr = new String[]{"abb", "bab", "abbb", "cvv"};
+//        Arrays.sort(str_arr);
         int test_int = 3;
-        ListNode l1 = generateSampleListNode();
-        ListNode l2 = generateSampleListNode();
+//        ListNode l1 = generateSampleListNode();
+//        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-//        boolean result = solution.isPalindrome("A man, a plan, a canal: Panama");
-        while (solution.hasNext()) {
-            int result = solution.next();
-            System.out.println("Output =====> " + result);
-        }
-//        System.out.println("Input =====> " + Arrays.toString(data));
+        int result = solution.firstMissingPositive(data);
+        System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + test_int);
-//        System.out.println("Output =====> " + result);
+        System.out.println("Output =====> " + result);
 //        while (res.next != null) {
 //            System.out.println(res.val);
 //            res = res.next;
