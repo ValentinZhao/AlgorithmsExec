@@ -3,26 +3,23 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc609.Solution609;
-
-import java.util.Arrays;
-import java.util.List;
+import lc152.Solution152;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution609 solution = new Solution609();
-//        int[] data = new int[]{3,4,-1,1};
-        String[] str_arr = new String[]{"root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"};
+        Solution152 solution = new Solution152();
+        int[] data = new int[]{2,3,-2,4};
+//        String[] str_arr = new String[]{"root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"};
 //        Arrays.sort(str_arr);
         int test_int = 3;
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        List result = solution.findDuplicate(str_arr);
-        System.out.println("Input =====> " + Arrays.toString(str_arr));
-//        System.out.println("Input =====> " + test_int);
+        int result = solution.maxProduct(data);
+//        System.out.println("Input =====> " + Arrays.toString(str_arr));
+        System.out.println("Input =====> " + data);
         System.out.println("Output =====> " + result);
 //        while (res.next != null) {
 //            System.out.println(res.val);
