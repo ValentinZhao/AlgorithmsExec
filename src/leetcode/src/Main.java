@@ -21,6 +21,7 @@ public class Main {
 //        System.out.println("Input =====> " + Arrays.toString(str_arr));
         System.out.println("Input =====> " + data);
         System.out.println("Output =====> " + result);
+        System.out.println("Output =====> " + Math.sqrt(13));
 //        while (res.next != null) {
 //            System.out.println(res.val);
 //            res = res.next;
