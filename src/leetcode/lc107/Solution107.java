@@ -23,7 +23,7 @@ public class Solution107 {
                 if(queue.peek().right != null) queue.offer(queue.peek().right);
                 list.add(queue.peek().val);
             }
-            nestedList.add(0, list);
+            nestedList.add(0, list); // 从双向链表的链表头插入
         }
         return nestedList;
     }
@@ -37,6 +37,8 @@ public class Solution107 {
 
     private void levelOrderBottomDFS(List<List<Integer>> wrapList, TreeNode root, int level) {
         if (root == null) return;
+        // 我们看到level这个东西并不能直接计数，而是需要到某个程度由容器去记录，因为int是按照值传递的，并不保存引用
+        // 递归栈跳出时level都是本层的那个值，并不能拿来做什么，但是他可以记录递归栈的深度，用这个深度来做一些业务是可以的
         if (level >= wrapList.size()) wrapList.add(0, new LinkedList<Integer>()); // 进入到下一层了，补一个list
         levelOrderBottomDFS(wrapList, root.left, level + 1);
         levelOrderBottomDFS(wrapList, root.right, level + 1);
