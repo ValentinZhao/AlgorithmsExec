@@ -3,7 +3,7 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc240.Solution240;
+import lc547.Solution547;
 
 import java.util.Arrays;
 
@@ -11,17 +11,18 @@ public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution240 solution = new Solution240();
+        Solution547 solution = new Solution547();
         int[] data = new int[]{2,3,-2,4};
 //        int[][] matrix = new int[][]{{1,4,7,11,15}, {2,5,8,12,19}, {3,6,9,16,22}, {10,13,14,17,24}, {18,21,23,26,30}};
-        int[][] matrix = new int[][]{{-1,3}};
+//        int[][] matrix = new int[][]{{-1,3}};
+        int [][] matrix = new int[][]{{1,1,0}, {1,1,0}, {0,0,1}};
 //        String[] str_arr = new String[]{"root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"};
 //        Arrays.sort(str_arr);
         int test_int = 3;
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        boolean result = solution.searchMatrix(matrix, 3);
+        int result = solution.findCircleNum(matrix);
 //        System.out.println("Input =====> " + Arrays.toString(str_arr));
         System.out.println("Input =====> " + Arrays.toString(matrix));
         System.out.println("Output =====> " + result);

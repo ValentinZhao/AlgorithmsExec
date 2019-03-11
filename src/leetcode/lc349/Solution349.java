@@ -1,4 +1,9 @@
-public Solution349 {
+package lc349;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Solution349 {
     public int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> set = new HashSet<>();
         Set<Integer> intersect = new HashSet<>();
