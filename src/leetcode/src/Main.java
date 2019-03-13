@@ -3,29 +3,31 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc547.Solution547;
+import lc332.Solution332;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution547 solution = new Solution547();
+        Solution332 solution = new Solution332();
         int[] data = new int[]{2,3,-2,4};
 //        int[][] matrix = new int[][]{{1,4,7,11,15}, {2,5,8,12,19}, {3,6,9,16,22}, {10,13,14,17,24}, {18,21,23,26,30}};
 //        int[][] matrix = new int[][]{{-1,3}};
-        int [][] matrix = new int[][]{{1,1,0}, {1,1,0}, {0,0,1}};
+//        int [][] matrix = new int[][]{{1,1,0}, {1,1,0}, {0,0,1}};
+        String[][] tickets = new String[][]{{"MUC", "LHR"}, {"JFK", "MUC"}, {"SFO", "SJC"}, {"LHR", "SFO"}};
 //        String[] str_arr = new String[]{"root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"};
 //        Arrays.sort(str_arr);
         int test_int = 3;
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.findCircleNum(matrix);
+        List<String> result = solution.findItinerary(tickets);
 //        System.out.println("Input =====> " + Arrays.toString(str_arr));
-        System.out.println("Input =====> " + Arrays.toString(matrix));
-        System.out.println("Output =====> " + result);
+        System.out.println("Input =====> " + Arrays.toString(tickets));
+        System.out.println("Output =====> " + result.toString());
 //        while (res.next != null) {
 //            System.out.println(res.val);
 //            res = res.next;
