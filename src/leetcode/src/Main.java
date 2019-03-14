@@ -3,31 +3,38 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc332.Solution332;
+import lc542.Solution542;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution332 solution = new Solution332();
+        Solution542 solution = new Solution542();
         int[] data = new int[]{2,3,-2,4};
 //        int[][] matrix = new int[][]{{1,4,7,11,15}, {2,5,8,12,19}, {3,6,9,16,22}, {10,13,14,17,24}, {18,21,23,26,30}};
 //        int[][] matrix = new int[][]{{-1,3}};
-//        int [][] matrix = new int[][]{{1,1,0}, {1,1,0}, {0,0,1}};
-        String[][] tickets = new String[][]{{"MUC", "LHR"}, {"JFK", "MUC"}, {"SFO", "SJC"}, {"LHR", "SFO"}};
+        int [][] matrix = new int[][]{{0,0,0}, {0,1,0}, {1,1,1}};
+//        String[][] tickets = new String[][]{{"MUC", "LHR"}, {"JFK", "MUC"}, {"SFO", "SJC"}, {"LHR", "SFO"}};
 //        String[] str_arr = new String[]{"root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"};
 //        Arrays.sort(str_arr);
         int test_int = 3;
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        List<String> result = solution.findItinerary(tickets);
+        int[][] result = solution.updateMatrix(matrix);
 //        System.out.println("Input =====> " + Arrays.toString(str_arr));
-        System.out.println("Input =====> " + Arrays.toString(tickets));
-        System.out.println("Output =====> " + result.toString());
+//        System.out.println("Input =====> " + Arrays.toString(matrix));
+//        System.out.println("Output =====> " + result.toString());
+        System.out.println("=======INPUT=======");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.println(Arrays.toString(matrix[i]));
+        }
+        System.out.println("=======OUTPUT=======");
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(Arrays.toString(result[i]));
+        }
 //        while (res.next != null) {
 //            System.out.println(res.val);
 //            res = res.next;
