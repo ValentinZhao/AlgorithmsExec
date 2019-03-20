@@ -14,6 +14,8 @@ public class Solution560 {
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
             if (map.containsKey(sum - k)) { // sum - k能在map中找到的话，说明存在着这样的sum1，使得sum-sum1=k成立
+                // 毕竟sum相当于sum[0,j]，sum1相当于sum[0,i-1]，那么sum[i,j]就是sum-sum1咯
+                // 这时候的结果就是取出来的一段continuous sub-array
                 count += map.get(sum - k);
             }
             map.put(sum, map.getOrDefault(sum, 0) + 1);
