@@ -3,16 +3,15 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc128.Solution128;
-
-import java.util.Arrays;
+import lc316.Solution316;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution128 solution = new Solution128();
-        int[] data = new int[]{100,4,200,1,3,2};
+        Solution316 solution = new Solution316();
+//        int[] data = new int[]{100,4,200,1,3,2};
+        String data = "bcabc";
 //        int[][] matrix = new int[][]{{1,4,7,11,15}, {2,5,8,12,19}, {3,6,9,16,22}, {10,13,14,17,24}, {18,21,23,26,30}};
 //        int[][] matrix = new int[][]{{-1,3}};
         int [][] matrix = new int[][]{{0,0,0}, {0,1,0}, {1,1,1}};
@@ -23,8 +22,8 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.longestConsecutive(data);
-        System.out.println("Input =====> " + Arrays.toString(data));
+        String result = solution.removeDuplicateLetters(data);
+        System.out.println("Input =====> " + data);
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
         System.out.println("Output =====> " + result);
 //        System.out.println("=======INPUT=======");
