@@ -10,6 +10,8 @@ package lc045;
 public class Solution045 {
     public int jump(int[] nums) {
         int jump = 0, currentEnd = 0, currentFarthest = 0;
+        // 只遍历到倒数第二位，因为在倒数第二位的时候，它的currentEnd已经指到了最后一位（到达终点），所以我们不能把最后一位算进来（也就是终点是不计数的）
+        // 否则就会使得计数多了1
         for (int i = 0; i < nums.length - 1; i++) {
             currentFarthest = Math.max(currentFarthest, nums[i] + i);
             if (i == currentEnd) {
