@@ -3,7 +3,7 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc075.Solution075;
+import lc246.Solution246;
 
 import java.util.Arrays;
 
@@ -11,7 +11,7 @@ public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution075 solution = new Solution075();
+        Solution246 solution = new Solution246();
         int[] data = new int[]{2,0,2,1,1,0};
 //        String data = "2*3-4*5";
 //        int[][] matrix = new int[][]{{1,4,7,11,15}, {2,5,8,12,19}, {3,6,9,16,22}, {10,13,14,17,24}, {18,21,23,26,30}};
@@ -24,10 +24,10 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        solution.sortColors(data);
+        boolean result = solution.isStrobogrammatic("89368");
         System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
-        System.out.println("Output =====> " + Arrays.toString(data));
+        System.out.println("Output =====> " + result);
 //        System.out.println("=======INPUT=======");
 //        for (int i = 0; i < matrix.length; i++) {
 //            System.out.println(Arrays.toString(matrix[i]));
