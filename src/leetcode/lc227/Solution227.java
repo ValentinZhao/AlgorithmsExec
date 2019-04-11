@@ -15,6 +15,8 @@ public class Solution227 {
             char c = s.charAt(i);
             if (Character.isDigit(c)) number = number * 10 + c - '0';
             if (!Character.isDigit(c) && c != ' ' || i == s.length() - 1) {
+                // 有一点非常重要的就是，当c遍历到运算符的时候，sign是比c慢一个运算符的，这样其实是保证sign和c之间的那个数字可以被构建完
+                // 这样的话就可以正常进行二则运算了
                 if (sign == '+') stack.push(number);
                 else if (sign == '-') stack.push(-number);
                 else if (sign == '*') stack.push(stack.pop() * number);
