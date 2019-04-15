@@ -3,7 +3,7 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc246.Solution246;
+import lc123.Solution123;
 
 import java.util.Arrays;
 
@@ -11,8 +11,8 @@ public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution246 solution = new Solution246();
-        int[] data = new int[]{2,0,2,1,1,0};
+        Solution123 solution = new Solution123();
+        int[] data = new int[]{3,3,5,0,0,3,1,4};
 //        String data = "2*3-4*5";
 //        int[][] matrix = new int[][]{{1,4,7,11,15}, {2,5,8,12,19}, {3,6,9,16,22}, {10,13,14,17,24}, {18,21,23,26,30}};
 //        int[][] matrix = new int[][]{{-1,3}};
@@ -24,7 +24,7 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        boolean result = solution.isStrobogrammatic("89368");
+        int result = solution.maxProfit(data);
         System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
         System.out.println("Output =====> " + result);
