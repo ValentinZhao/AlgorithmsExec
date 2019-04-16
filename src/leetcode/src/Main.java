@@ -3,7 +3,7 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc123.Solution123;
+import lc209.Solution209;
 
 import java.util.Arrays;
 
@@ -11,8 +11,8 @@ public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution123 solution = new Solution123();
-        int[] data = new int[]{3,3,5,0,0,3,1,4};
+        Solution209 solution = new Solution209();
+        int[] data = new int[]{1,2,3,4,5};
 //        String data = "2*3-4*5";
 //        int[][] matrix = new int[][]{{1,4,7,11,15}, {2,5,8,12,19}, {3,6,9,16,22}, {10,13,14,17,24}, {18,21,23,26,30}};
 //        int[][] matrix = new int[][]{{-1,3}};
@@ -24,7 +24,7 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.maxProfit(data);
+        int result = solution.minSubArrayLen(11, data);
         System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
         System.out.println("Output =====> " + result);
