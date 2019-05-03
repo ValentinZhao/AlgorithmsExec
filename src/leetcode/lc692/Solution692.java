@@ -4,6 +4,8 @@ import java.util.*;
 
 /**
  * 使用小顶堆不使用大顶堆主要是为了O(nlogK)的时间复杂度
+ *
+ * also check out lc451 lc347
  */
 public class Solution692 {
     public List<String> topKFrequent(String[] words, int k) {
