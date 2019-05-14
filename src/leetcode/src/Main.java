@@ -3,16 +3,17 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc035.Solution035;
+import lc658.Solution658;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution035 solution = new Solution035();
-        int[] data = new int[]{1,3,5};
+        Solution658 solution = new Solution658();
+        int[] data = new int[]{0,0,0,1,3,5,6,7,8,8};
 //        String data = "2*3-4*5";
 //        int[][] matrix = new int[][]{{1,4,7,11,15}, {2,5,8,12,19}, {3,6,9,16,22}, {10,13,14,17,24}, {18,21,23,26,30}};
 //        int[][] matrix = new int[][]{{-1,3}};
@@ -24,10 +25,10 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.searchInsert(data, 4);
+        List result = solution.findClosestElements(data, 2, 2);
         System.out.println("Input =====> " + Arrays.toString(data));
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
-        System.out.println("Output =====> " + result);
+        System.out.println("Output =====> " + result.toString());
 //        System.out.println("=======INPUT=======");
 //        for (int i = 0; i < matrix.length; i++) {
 //            System.out.println(Arrays.toString(matrix[i]));
