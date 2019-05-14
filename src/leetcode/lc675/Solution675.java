@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * 首先我们需要把树按照树的高度的顺序进行砍伐，那么我们确实需要一个pq来存这些数据，new int[]{row, col, height}，sorted by int[2]
- * 然后推出树节点，然后用BFS来找最短路径，就像Dijskstra一样，不知道为什么最短路径用BFS就看一下Dj
+ * 然后推出树节点，然后用BFS来找最短路径，就像Dijkstra一样，不知道为什么最短路径用BFS就看一下Dj
  */
 public class Solution675 {
     private static int[][] dirs = {{0,1}, {0, -1}, {1, 0}, {-1, 0}};
