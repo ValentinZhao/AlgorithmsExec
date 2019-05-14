@@ -25,6 +25,9 @@ public class Solution658 {
         return res;
     }
 
+    /**
+     * 二分查找范本！
+     */
     private int binarySearch(int[] arr, int target) {
         int lo = 0, hi = arr.length-1;
         while (lo <= hi) {
