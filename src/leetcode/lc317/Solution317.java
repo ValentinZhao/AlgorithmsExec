@@ -50,6 +50,10 @@ public class Solution317 {
                 for (int[] dir : dirs) {
                     int curX = prevDir[0] + dir[0];
                     int curY = prevDir[1] + dir[1];
+                    // 你可能会奇怪visited访问过了reach的每一项最多不是1么，但其实是上层有一个循环，从每一个房间开始向外找
+                    // 最短的路径，每次重新进入这个方法visited会重置，但reach不会
+                    // 而且由于确实每次BFS每个reach至多被遍历到一次，而且每次进入BFS是遍历到房间才进入
+                    // 那么就会导致说reach元素值和房间数相等的位置就是房间的位置，我们就可以用这个坐标对应的dist来计算总的路程
                     if (curX >= 0 && curX < rows && curY >= 0 && curY < cols &&
                         grid[curX][curY] == 0 && !visited[curX][curY]) {
                         reach[curX][curY]++;
