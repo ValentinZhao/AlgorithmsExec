@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lc317/Solution317.java" beforeDir="false" afterPath="$PROJECT_DIR$/lc317/Solution317.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lc340/Solution340.java" beforeDir="false" afterPath="$PROJECT_DIR$/lc340/Solution340.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lc340/Solution340.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -180,7 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lc499/Solution499.java" />
         <option value="$PROJECT_DIR$/lc841.java" />
         <option value="$PROJECT_DIR$/lc841/Solution841.java" />
         <option value="$PROJECT_DIR$/lc323/Solution323.java" />
@@ -231,6 +229,7 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/lc317/Solution317.java" />
         <option value="$PROJECT_DIR$/lc211/WordDictionary.java" />
+        <option value="$PROJECT_DIR$/lc340/Solution340.java" />
       </list>
     </option>
   </component>
@@ -1284,8 +1283,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lc340/Solution340.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
