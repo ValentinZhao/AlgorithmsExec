@@ -14,3 +14,16 @@ public class Solution929 {
         return set.size();
     }
 }
+
+class Solution {
+    public int numUniqueEmails(String[] emails) {
+        Set<String> set = new HashSet<>();
+        for (String email : emails) {
+            String[] parts = email.split("@");
+            String[] local = parts[0].split("\\+");
+            String address = local[0].replace(".", "") + "@" + parts[1];
+            set.add(address);
+        }
+        return set.size();
+    }
+}
