@@ -22,3 +22,23 @@ public class Solution042 {
         return volume;
     }
 }
+
+class Solution {
+    public int trap(int[] height) {
+        int volume = 0;
+        int leftMax = 0, rightMax = 0;
+        int left = 0, right = height.length - 1;
+        while (left <= right) {
+            if (height[left] <= height[right]) {
+                if (height[left] >= leftMax) leftMax = height[left];
+                else volume += leftMax - height[left];
+                left++;
+            } else {
+                if (height[right] > rightMax) rightMax = height[right];
+                else volume += rightMax - height[right];
+                right--;
+            }
+        }
+        return volume;
+    }
+}
