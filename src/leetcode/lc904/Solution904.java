@@ -29,3 +29,22 @@ public class Solution904 {
         return res;
     }
 }
+
+class Solution {
+    public int totalFruit(int[] tree) {
+        Map<Integer, Integer> map = new HashMap<>();
+        int head = 0, res = 0;
+        for (int i = 0; i < tree.length; i++) {
+            int curr = tree[i];
+            map.put(curr, map.getOrDefault(curr, 0) + 1);
+            while (map.size() > 2) {
+                int currHead = tree[head];
+                map.put(currHead, map.get(currHead) - 1);
+                if (map.get(currHead) == 0) map.remove(currHead);
+                head++;
+            }
+            res = Math.max(res, i - head + 1);
+        }
+        return res;
+    }
+}
