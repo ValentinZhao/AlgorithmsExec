@@ -17,13 +17,12 @@ public class Solution394 {
                 while (s.charAt(i) != '[') i++;
                 int num = Integer.valueOf(s.substring(digitBegin, i));
                 int count = 1;
-                int strBegin = i + 1;
-                i++;
+                int strBegin = ++i;
                 // 直接读到最后一个匹配当前'['的']'
                 while (count != 0) {
                     if (s.charAt(i) == '[') count ++;
                     else if (s.charAt(i) == ']') count --;
-                    i ++;
+                    i++;
                 }
                 i--;
                 // 在这里递归调用，生成子串的结果
@@ -34,6 +33,35 @@ public class Solution394 {
             } else {
                 builder.append(c);
             }
+        }
+        return builder.toString();
+    }
+}
+
+class Solution {
+    public String decodeString(String s) {
+        if (s.length() == 0) return "";
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (Character.isDigit(c)) {
+                int digitBegin = i;
+                while(s.charAt(i) != '[') i++;
+                int num = Integer.valueOf(s.substring(digitBegin, i));
+                int squreCount = 1;
+                int strBegin = ++i;
+                while (squreCount > 0) {
+                    if (s.charAt(i) == '[') squreCount++;
+                    else if (s.charAt(i) == ']') squreCount--;
+                    i++;
+                }
+                i--;
+                String content = s.substring(strBegin, i);
+                String pattern = decodeString(content);
+                for (int j = 0; j < num; j++) {
+                    builder.append(pattern);
+                }
+            } else builder.append(c);
         }
         return builder.toString();
     }
