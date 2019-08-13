@@ -52,7 +52,7 @@ class Solution {
         int[][] res = new int[intervals.length][2];
         for (int i = 0; i < intervals.length; i++) {
             if (end >= intervals[i][0]) {
-                end = intervals[i][1];
+                end = Math.max(end, intervals[i][1]);
             } else {
                 res[i] = new int[]{start, end};
                 start = intervals[i][0];
