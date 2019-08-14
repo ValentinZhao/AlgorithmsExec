@@ -1,9 +1,6 @@
 package lc127;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 利用BFS，通过每一位进行a-z的比较并能够成功匹配wordList中的单词进行入队，最后不断匹配出完全匹配endWord的就是结果了
@@ -35,6 +32,39 @@ public class Solution127 {
             } else {
                 level++;
                 if (!queue.isEmpty()) queue.offer(null);
+            }
+        }
+        return 0;
+    }
+}
+
+class Solution {
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Set<String> dictionary = new HashSet<>(wordList);
+        Set<String> set = new HashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        int level = 0;
+        set.add(beginWord);
+        queue.offer(beginWord);
+        queue.offer(null); // we use null to distinguish levels
+        while (!queue.isEmpty()) {
+            String cur = queue.poll();
+            if (cur != null) {
+                char[] chs = cur.toCharArray();
+                for (int i = 0; i < cur.length(); i++) {
+                    for (char c = 'a'; c <= 'z' ; c++) {
+                        chs[i] = c;
+                        String temp = new String(chs);
+                        if (temp.equals(endWord)) return level + 1;
+                        if (dictionary.contains(temp) && !set.contains(temp)) {
+                            set.add(temp);
+                            queue.offer(temp);
+                        }
+                    }
+                }
+            } else {
+                level++;
+                queue.offer(null);
             }
         }
         return 0;

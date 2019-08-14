@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lc102/Solution102.java" beforeDir="false" afterPath="$PROJECT_DIR$/lc102/Solution102.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lc127/Solution127.java" beforeDir="false" afterPath="$PROJECT_DIR$/lc127/Solution127.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lc042/Solution042.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lc015/Solution015.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,11 +95,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lc102/Solution102.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" selection-start-line="32" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="630">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lc127/Solution127.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="41" selection-start-line="41" selection-end-line="70" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -167,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lc314/Solution314.java" />
         <option value="$PROJECT_DIR$/lc092/Solution092.java" />
         <option value="$PROJECT_DIR$/lc177/NthHighestSalary.sql" />
         <option value="$PROJECT_DIR$/lc735/Solution735.java" />
@@ -218,6 +217,7 @@
         <option value="$PROJECT_DIR$/lc279/Solution279.java" />
         <option value="$PROJECT_DIR$/lc101/Solution101.java" />
         <option value="$PROJECT_DIR$/lc102/Solution102.java" />
+        <option value="$PROJECT_DIR$/lc127/Solution127.java" />
       </list>
     </option>
   </component>
@@ -823,13 +823,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="584" column="9" selection-start-line="584" selection-start-column="9" selection-end-line="584" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1227,8 +1220,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lc102/Solution102.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" selection-start-line="32" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="630">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lc127/Solution127.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="41" selection-start-line="41" selection-end-line="70" selection-end-column="5" />
         </state>
       </provider>
     </entry>
