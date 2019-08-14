@@ -46,3 +46,42 @@ public class Solution301 {
         return count == 0;
     }
 }
+
+class Solution {
+    public List<String> removeInvalidParentheses(String s) {
+        List<String> res = new ArrayList<>();
+        if (s == null) return res;
+        Queue<String> queue = new LinkedList<>();
+        Set<String> set = new HashSet<>();
+        boolean found = false;
+        queue.offer(s);
+        set.add(s);
+        while (!queue.isEmpty()) {
+            String curr = queue.poll();
+            if (isValid(curr)) {
+                found = true;
+                res.add(curr);
+            }
+            if (found) continue;
+            for (int i = 0; i < curr.length(); i++) {
+                while (curr.charAt(i) != '(' && curr.charAt(i) != '(') continue;
+                String temp = curr.substring(0, i) + curr.substring(i+1);
+                if (!set.contains(temp)) {
+                    queue.offer(temp);
+                    set.add(temp);
+                }
+            }
+        }
+        return res;
+    }
+
+    private boolean isValid(String s) {
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(') count++;
+            if (c == ')' && count-- == 0) return false;
+        }
+        return count == 0;
+    }
+}
