@@ -43,3 +43,33 @@ public class Solution973 {
         return p1[0]*p1[0] + p1[1]*p1[1] - p2[0]*p2[0] - p2[1]*p2[1];
     }
 }
+
+
+class Solution {
+    public int[][] kClosest(int[][] points, int K) {
+        int n = points.length, left = 0, right = n - 1;
+        while (left <= right) {
+            int pivot = partition(points, left, right);
+            if (pivot > K) right = pivot - 1;
+            else if (pivot < K) left = pivot + 1;
+            else break;
+        }
+        return Arrays.copyOfRange(points, 0 , K);
+    }
+
+    private int partition(int[][] points, int left, int right) {
+        int[] pivot = points[left];
+        while (left < right) {
+            while (left < right && getDistance(points[right], pivot) >= 0) right--;
+            points[left] = points[right];
+            while (left < right && getDistance(points[left], pivot) <= 0) left++;
+            points[right] = points[left];
+        }
+        points[left] = pivot;
+        return left;
+    }
+
+    private int getDistance(int[] p1, int[] p2) {
+        return p1[0]*p1[0] + p1[1]*p1[1] - p2[0]*p2[0] - p2[1]*p2[1];
+    }
+}
