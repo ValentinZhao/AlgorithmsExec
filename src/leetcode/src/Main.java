@@ -3,15 +3,16 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc621.Solution621;
+import lc022.Solution022;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution621 solution = new Solution621();
+        Solution022 solution = new Solution022();
 //        int[] data = new int[]{0,0,0,1,3,5,6,7,8,8};
 //        String data = "2*3-4*5";
 //        int[][] matrix = new int[][]{{1,0,2,0,1},{0,0,0,0,0},{0,0,1,0,0}};
@@ -25,10 +26,10 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int result = solution.leastInterval(datas, 2);
+        List<String> result = solution.generateParenthesis(3);
         System.out.println("Input =====> " + Arrays.toString(datas));
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
-        System.out.println("Output =====> " + result);
+        System.out.println("Output =====> " + Arrays.asList(result));
 //        System.out.println("=======INPUT=======");
 //        for (int i = 0; i < matrix.length; i++) {
 //            System.out.println(Arrays.toString(matrix[i]));
