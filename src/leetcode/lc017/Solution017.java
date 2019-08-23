@@ -26,6 +26,7 @@ public class Solution017 {
          */
         for (int i = 0; i < digits.length(); i++) {
             int x = Character.getNumericValue(digits.charAt(i));
+            // 这个判断就很巧妙了，他只允许比当前遍历到的位数短一位的元素执行下面的字符串拼接操作
             while(ans.peek().length() == i) {
                 String t = ans.remove();
                 for (char s : mapping[x].toCharArray()) {
