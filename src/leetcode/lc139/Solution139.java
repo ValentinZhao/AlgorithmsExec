@@ -24,3 +24,24 @@ class Solution139 {
         return dp[l];
     }
 }
+
+class Solution {
+    public boolean wordBreak(String s, List<String> wordDict) {
+        int l = wordDict.size();
+        boolean [] dp = new boolean[l+1];
+        dp[0] = true;
+        for (int i = 1; i <= l; i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && wordDict.contains(s.substring(j, i))) {
+                    // 那么由于dp[j]是true，它说明前j个字符组成的字母可以被找到了
+                    // 同时j到i的这段字母也可以被找到，证明从0到i都是可以被找到的
+                    // 那么就直接把dp[i]给到true，然后退出循环，因为不用再找了
+                    // 我们找的这个j其实就是找一个合适的位置，从它断开的两个词都可以在dict中找到
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+
+    }
+}
