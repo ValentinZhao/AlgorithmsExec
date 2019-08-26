@@ -31,3 +31,20 @@ public class Solution124 {
         return Math.max(left, right) + root.val;
     }
 }
+
+class Solution {
+    private static int maxValue;
+    public int maxPathSum(TreeNode root) {
+        maxValue = Integer.MIN_VALUE;
+        findGreaterSum(root);
+        return maxValue;
+    }
+
+    private int findGreaterSum(TreeNode root) {
+        if (root == null) return 0;
+        int left = Math.max(0, findGreaterSum(root.left));
+        int right = Math.max(0, findGreaterSum(root.right));
+        maxValue = Math.max(maxValue, left + right + root.val);
+        return Math.max(left, right) + root.val;
+    }
+}
