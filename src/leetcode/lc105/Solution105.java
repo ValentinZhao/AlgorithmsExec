@@ -28,3 +28,21 @@ public class Solution105 {
         return root;
     }
 }
+
+class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return buildTreeHelper(0, 0, inorder.length - 1, preorder, inorder);
+    }
+
+    private TreeNode buildTreeHelper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
+        if (preStart > preorder.length - 1 || inStart > inEnd) return null;
+        int inIndex = 0;
+        TreeNode root = new TreeNode(preorder[preStart]);
+        for (int i = 0; i < inorder.length; i++) {
+            if (inorder[i] == root.val) inIndex = i;
+        }
+        root.left = buildTreeHelper(preStart + 1, inStart, inIndex - 1, preorder, inorder);
+        root.right = buildTreeHelper(preStart + (inIndex - inStart + 1), inIndex + 1, inEnd, preorder, inorder);
+        return root;
+    }
+}
