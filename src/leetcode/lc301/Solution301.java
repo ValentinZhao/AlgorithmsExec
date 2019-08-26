@@ -6,7 +6,7 @@ import java.util.*;
  * 利用BFS进行层级遍历，每一层，指代的是去掉一个左括号或右括号，并且valid的一个字符串的集合
  * 下一层就是再少一个左右括号的valid的字符串集合，以此类推，太巧妙了！
  */
-public class Solution301 {
+public class  Solution301 {
     public List<String> removeInvalidParentheses(String s) {
         List<String> list = new ArrayList<>();
         if (s == null) return list;
