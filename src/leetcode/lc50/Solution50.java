@@ -20,3 +20,17 @@ public class Solution50 {
         return (n % 2 == 0) ? myPow(x * x, n / 2) : x * myPow(x * x, n / 2);
     }
 }
+
+class Solution {
+    public double myPow(double x, int n) {
+        if (n == 1) return 1;
+        if (n == Integer.MIN_VALUE) {
+            n = Integer.MAX_VALUE - 1;
+            x = 1 / x;
+        } else if (n < 0) {
+            n = -n;
+            x = 1 / x;
+        }
+        return (n % 2 == 0) ? myPow(x * x, n / 2) : x * myPow(x * x, n / 2);
+    }
+}
