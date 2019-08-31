@@ -18,3 +18,17 @@ public class Solution153 {
         return nums[lo];
     }
 }
+
+class Solution {
+    public int findMin(int[] nums) {
+        if (nums[0] > nums[nums.length-1]) return nums[0];
+        int n = nums.length;
+        int left = 0, right = n - 1;
+        while (left < right) {
+            int mid = (left + right) >> 1;
+            if (nums[0] >= nums[mid]) right = mid;
+            else left = mid + 1;
+        }
+        return nums[left];
+    }
+}
