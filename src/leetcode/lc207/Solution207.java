@@ -21,6 +21,7 @@ public class Solution207 {
         return true;
     }
 
+    
     // status: 0 - undefined
     // 1- visiting，表示在递归栈
     // 2- visited，表示访问过并返回，这个节点是没有neighbor的或者有neighbor但是没有成环（由出度为0的节点自底向上返回而来）
