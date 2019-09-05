@@ -50,3 +50,37 @@ public class Solution133 {
         UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
     }
 }
+
+class Solution {
+    public Node cloneGraph(Node node) {
+        if (node == null) return node;
+        Node head = new Node(node.val, new ArrayList<>());
+        LinkedList<Node> queue = new LinkedList<>();
+        Map<Integer, Node> map = new HashMap<>();
+        map.put(head.val, head);
+        queue.offer(node);
+        while (!queue.isEmpty()) {
+            Node cur = queue.pop();
+            for (Node neighbor : cur.neighbors) {
+                if (!map.containsKey(neighbor.val)) {
+                    map.put(neighbor.val, neighbor);
+                    queue.push(neighbor);
+                }
+                map.get(cur.val).neighbors.add(map.get(neighbor.val));
+            }
+        }
+        return head;
+    }
+
+    private class Node {
+        public int val;
+        public List<Node> neighbors;
+
+        public Node() {}
+
+        public Node(int _val,List<Node> _neighbors) {
+            val = _val;
+            neighbors = _neighbors;
+        }
+    };
+}
