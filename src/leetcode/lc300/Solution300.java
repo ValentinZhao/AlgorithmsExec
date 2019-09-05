@@ -47,3 +47,31 @@ public class Solution300 {
         return lo;
     }
 }
+
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        if (nums.length == 0 || nums == null) return 0;
+        int[] arr = new int[nums.length];
+        int len = 0;
+        arr[len++] = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > arr[len-1]) arr[len++] = nums[i];
+            else {
+                int pos = binarySearch(arr, len, nums[i]);
+                arr[pos] = nums[i];
+            }
+        }
+        return len;
+    }
+
+    private int binarySearch(int[] arr, int len, int num) {
+        int lo = 0, hi = len - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (arr[mid] == num) return mid;
+            else if (arr[mid] < num) lo = mid + 1;
+            else hi = mid - 1;
+        }
+        return lo;
+    }
+}
