@@ -65,7 +65,29 @@ public class Solution743 {
 }
 
 
-
+class Solution {
+    public int networkDelayTime(int[][] times, int N, int K) {
+        if (times == null || times.length == 0) return -1;
+        List<List<int[]>> graph = new ArrayList<>();
+        for (int i = 0; i <= N; i++) graph.add(new ArrayList<>());
+        for (int[] time : times) graph.get(time[0]).add(new int[]{time[1], time[2]});
+        PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        Set<Integer> visited = new HashSet<>();
+        int dist = 0;
+        minHeap.offer(new int[]{K, 0});
+        while (!minHeap.isEmpty()) {
+            int[] cur = minHeap.poll();
+            if (!visited.add(cur[0])) continue;
+            dist = cur[1];
+            for (int[] neighbor : graph.get(cur[0])) {
+                if (!visited.contains(neighbor[0])) {
+                    minHeap.offer(new int[]{neighbor[0], neighbor[1] + cur[1]});
+                }
+            }
+        }
+        return visited.size() == N ? dist : -1;
+    }
+}
 
 
 
