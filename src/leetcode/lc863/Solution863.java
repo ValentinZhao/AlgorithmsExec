@@ -2,10 +2,7 @@ package lc863;
 
 import TreeNode.TreeNode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 我们先计算出来从根节点到target节点的路径上所有节点到target的距离，存到map里面，然后再用dfs
@@ -52,5 +49,50 @@ public class Solution863 {
             return right + 1;
         }
         return -1;
+    }
+}
+
+class Solution {
+    private static Map<TreeNode, List<TreeNode>> map = new HashMap<>();
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+        buildGraph(root, null);
+        Queue<TreeNode> queue = new LinkedList<>();
+        Set<TreeNode> set = new HashSet<>();
+        queue.offer(target);
+        set.add(target);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            if (K == 0) {
+                for (int i = 0; i < size; i++) {
+                    res.add(queue.poll().val);
+                    return res;
+                }
+            }
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                for (TreeNode n : map.get(node)) {
+                    if (set.contains(n)) continue;
+                    set.add(n);
+                    queue.offer(n);
+                }
+            }
+            K--;
+        }
+        return res;
+    }
+
+    private void buildGraph(TreeNode root, TreeNode parent) {
+        if (root == null) return;
+        if (!map.containsKey(root)) {
+            map.put(root, new ArrayList<>());
+            if (parent != null) {
+                map.get(root).add(parent);
+                map.get(parent).add(root);
+            }
+        }
+        buildGraph(root.left, root);
+        buildGraph(root.right, root);
     }
 }
