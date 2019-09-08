@@ -1,6 +1,7 @@
 package lc317;
 
 import java.util.ArrayDeque;
+import java.util.LinkedList;
 import java.util.Queue;
 
 /**
@@ -65,5 +66,60 @@ public class Solution317 {
             }
             step++;
         }
+    }
+}
+
+class Solution {
+    private static int[][] dirs = new int[][]{{1,0}, {-1,0}, {0,1}, {0,-1}};
+    public int shortestDistance(int[][] grid) {
+        int row = grid.length;
+        int col = grid[0].length;
+        int buildings = 0;
+        int[][] dist = new int[row][col];
+        int[][] reach = new int[row][col];
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (grid[i][j] == 1) {
+                    buildings++;
+                    findBuildingBFS(grid, i, j, reach, dist);
+                }
+            }
+        }
+        int min = Integer.MIN_VALUE;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (grid[i][j] == 0 && reach[i][j] == buildings) {
+                    min = Math.min(min, dist[i][j]);
+                }
+            }
+        }
+        if (min == Integer.MAX_VALUE) return -1;
+        return min;
+    }
+
+    private void findBuildingBFS(int[][] grid, int row, int col, int[][] reach, int[][] dist) {
+        Queue<int[]> queue = new LinkedList<>();
+        boolean[][] visited = new boolean[grid.length][grid[0].length];
+        queue.offer(new int[]{row, col});
+        int step = 1;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int k = 0; k < size; k++) {
+                int[] curr = queue.poll();
+                for (int[] dir : dirs) {
+                    int curX = curr[0] + dir[0];
+                    int curY = curr[1] + dir[1];
+                    if (curX >= 0 && curX < grid.length && curY >= 0 && curY < grid[0].length &&
+                            grid[curX][curY] == 0 && !visited[curX][curY]) {
+                        reach[curX][curY]++;
+                        visited[curX][curY] = true;
+                        queue.offer(new int[]{curX, curY});
+                        dist[curX][curY] += step;
+                    }
+                }
+            }
+            step++;
+        }
+
     }
 }
