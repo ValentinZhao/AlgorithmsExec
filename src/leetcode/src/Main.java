@@ -3,19 +3,18 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc077.Solution77;
+import lc733.Solution733;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution77 solution = new Solution77();
+        Solution733 solution = new Solution733();
 //        int[] data = new int[]{0,0,0,1,3,5,6,7,8,8};
 //        String data = "2*3-4*5";
-//        int[][] matrix = new int[][]{{1,0,2,0,1},{0,0,0,0,0},{0,0,1,0,0}};
+        int[][] matrix = new int[][]{{1,1,1},{1,1,0},{1,0,1}};
 //        int[][] matrix = new int[][]{{-1,3}};
 //        int [][] matrix = new int[][]{{0,0,0}, {0,1,0}, {1,1,1}};
 //        String[][] tickets = new String[][]{{"MUC", "LHR"}, {"JFK", "MUC"}, {"SFO", "SJC"}, {"LHR", "SFO"}};
@@ -26,9 +25,9 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        List<List<Integer>> result = solution.combine(4, 2);
-        System.out.println("Input =====> " + Arrays.toString(datas));
-//        System.out.println("Input =====> " + Arrays.toString(matrix));
+        int[][] result = solution.floodFill(matrix, 1,1,2);
+//        System.out.println("Input =====> " + Arrays.toString(datas));
+        System.out.println("Input =====> " + Arrays.toString(matrix));
         System.out.println("Output =====> " + Arrays.asList(result));
 //        System.out.println("=======INPUT=======");
 //        for (int i = 0; i < matrix.length; i++) {
