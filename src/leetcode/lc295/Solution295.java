@@ -31,3 +31,7 @@ public class Solution295 {
         return max.peek();
     }
 }
+
+class Solution {
+    
+}
