@@ -33,5 +33,5 @@ public class Solution295 {
 }
 
 class Solution {
-    
+
 }
