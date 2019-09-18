@@ -3,7 +3,7 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc733.Solution733;
+import lc755.Solution755;
 
 import java.util.Arrays;
 
@@ -11,8 +11,8 @@ public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution733 solution = new Solution733();
-//        int[] data = new int[]{0,0,0,1,3,5,6,7,8,8};
+        Solution755.Solution solution = new Solution755.Solution();
+        int[] data = new int[]{2,1,1,2,1,2,2};
 //        String data = "2*3-4*5";
         int[][] matrix = new int[][]{{1,1,1},{1,1,0},{1,0,1}};
 //        int[][] matrix = new int[][]{{-1,3}};
@@ -25,7 +25,7 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        int[][] result = solution.floodFill(matrix, 1,1,2);
+        int[] result = solution.pourWater(data, 4,3);
 //        System.out.println("Input =====> " + Arrays.toString(datas));
         System.out.println("Input =====> " + Arrays.toString(matrix));
         System.out.println("Output =====> " + Arrays.asList(result));
