@@ -37,3 +37,52 @@ public class Solution010 {
         return dp[strLen][patrLen];
     }
 }
+
+/**
+ * 1, If p.charAt(j) == s.charAt(i) :  dp[i][j] = dp[i-1][j-1];
+ * 2, If p.charAt(j) == '.' : dp[i][j] = dp[i-1][j-1];
+ * 3, If p.charAt(j) == '*':
+ *    here are two sub conditions:
+ *                1   if p.charAt(j-1) != s.charAt(i) : dp[i][j] = dp[i][j-2]  //in this case, a* only counts as empty
+ *                2   if p.charAt(i-1) == s.charAt(i) or p.charAt(i-1) == '.':
+ *                               dp[i][j] = dp[i-1][j]    //in this case, a* counts as multiple a
+ *                            or dp[i][j] = dp[i][j-1]   // in this case, a* counts as single a
+ *                            or dp[i][j] = dp[i][j-2]   // in this case, a* counts as empty
+ */
+class Solution {
+    public boolean isMatch(String s, String p) {
+        if (s == null || p == null) return false;
+        int m = s.length(), n = p.length();
+        boolean[][] dp = new boolean[m+1][n+1];
+        dp[0][0] = true;
+        for (int i = 0; i < n; i++) {
+            // 初始化第一列时，当前regexp读到了*，同时前面的regexp可以匹配
+            // 那么我们认为可以跳过这个*，认为i+2位置以前的都可以匹配
+            if (p.charAt(i) == '*' && dp[0][i-1]) {
+                dp[0][i+1] = true;
+            }
+        }
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                // 以下两种情况下，s和p可以直接同时进一位，因为这一位完全匹配
+                if (p.charAt(j) == '.') {
+                    dp[i+1][j+1] = dp[i][j];
+                }
+                if (p.charAt(j) == s.charAt(i)) {
+                    dp[i+1][j+1] = dp[i][j];
+                }
+                // 当当前regexp是*的话，情况分两种
+                if (p.charAt(j) == '*') {
+                    if (p.charAt(j-1) != s.charAt(i) && p.charAt(j-1) != '.') {
+                        dp[i+1][j+1] = dp[i+1][j-1]; // 跳过整个a*
+                    } else {
+                        dp[i+1][j+1] = dp[i][j+1] || // 这情况我们发现s不需要向前匹配，只有p向前了，它表示a*代表了aa，即*表示多个字符
+                                       dp[i+1][j] || // 这情况是a*只表示一个a，那么此时所求dp只需要匹配上一个regexp即可
+                                       dp[i+1][j-1]; // 它表示匹配到了.*，这样的话它可以是任何值，只需要直接和两个字符前的regexp相同即可
+                    }
+                }
+            }
+        }
+        return dp[m][n];
+    }
+}
