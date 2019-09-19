@@ -13,7 +13,7 @@ class Solution {
             return areaCnt * 2 + hilbertCurve(x - borderLen, y - borderLen, iter - 1);
         else if (x < borderLen && y >= borderLen) //左上角区域 = 前一阶往上移动borderLen
             return areaCnt + hilbertCurve(x, y - borderLen, iter - 1);
-        else if (x < borderLen && y < borderLen) //右下角区域 = 前一阶按照y=x对称
+        else if (x < borderLen && y < borderLen) //左下角区域 = 前一阶按照y=x对称
             return hilbertCurve(y, x, iter - 1);
         else //右下角区域 = 前一阶按照y=-x对称，然后右移2*borderLen - 1，上移borderLen - 1
         // 设原来坐标(a,b) => (-b, -a) => (2*borderLen - 1 - b, borderLen - 1 - a) = (x, y)
