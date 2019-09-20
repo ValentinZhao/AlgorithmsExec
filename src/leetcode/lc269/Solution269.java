@@ -51,3 +51,56 @@ public class Solution269 {
         }
     }
 }
+
+class Solution {
+    private final int N = 26;
+    public String alienOrder(String[] words) {
+        boolean[][] adj = new boolean[N][N];
+        int[] visited = new int[N];
+        buildGraph(words, adj, visited);
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < N; i++) {
+            if (visited[i] == 0) {
+                // 每个存在的字母我们才DFS
+                if (!dfs(adj, visited, builder, i)) return "";
+            }
+        }
+        return builder.reverse().toString();
+    }
+
+    private boolean dfs(boolean[][] adj, int[] visited, StringBuilder builder, int index) {
+        visited[index] = 1; // visiting
+        // 在一个dfs内，我们还要遍历26个字母，其实就相当于它的neighbor了
+        for (int i = 0; i < N; i++) {
+            if (adj[index][i]) {
+                if (visited[i] == 1) return false; // 成环了
+                if (visited[i] == 0) {
+                    // 一个dfs相当于在图内向下个节点走去，毕竟最后一个参数index更新了
+                    if (!dfs(adj, visited, builder, i)) return false;
+                }
+            }
+        }
+        visited[index] = 2; // 标记为2的我们从上面代码可知，永远不会被处理
+        builder.append((char)(index + 'a'));
+        return true;
+    }
+
+    private void buildGraph(String[] words, boolean[][] adj, int[] visited) {
+        Arrays.fill(visited, -1);
+        char[] pre = words[0].toCharArray();
+        // 所有出现过的字母置零
+        for(int k=0; k<pre.length;k++) visited[pre[k] - 'a'] = 0;
+        for(int i = 1; i< words.length;i++){
+            char[] cur = words[i].toCharArray();
+            for(int k= 0;k<cur.length;k++) visited[cur[k] - 'a'] =0;
+            int length = Math.min(pre.length, cur.length);
+            for(int j =0; j<length;j++){
+                if(cur[j]!=pre[j]){
+                    adj[pre[j]- 'a'][cur[j] - 'a'] = true;
+                    break;
+                }
+            }
+            pre = cur;
+        }
+    }
+}
