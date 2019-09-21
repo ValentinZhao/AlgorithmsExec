@@ -6,10 +6,15 @@
 3->4
 1->5.
 只要走到1，就可以从1走到剩余其他所有点，所以答案就是最少要走1个点
+
+相似问题 LC323
+https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
+
  */
 class Solution {
         private void search(Set<Integer> res, Map<Integer, Set<Integer>> nodes, int cur, int start,
                             Set<Integer> visited, Set<Integer> currVisited) {
+            // 这个就是看当前递归栈中有没有访问过某点
             currVisited.add(cur);
             // 这个visit是在getMin方法中控制start的，如果一个节点入度大于零的话那它就不可能作为起始点了
             // 当在递归中访问到了，证明它是从某个点进入到该点的，入度不为零
