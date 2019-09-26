@@ -97,6 +97,7 @@ class Solution {
             for(int j =0; j<length;j++){
                 if(cur[j]!=pre[j]){
                     adj[pre[j]- 'a'][cur[j] - 'a'] = true;
+                    // 找到一个非同样字母的对应关系我们就break，避免后面再次出现的其他mapping影响了前面已经设置好的部分
                     break;
                 }
             }

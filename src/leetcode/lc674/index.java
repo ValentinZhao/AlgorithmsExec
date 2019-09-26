@@ -1,4 +1,4 @@
-class Solution {
+class Solution674 {
     public int findLengthOfLCIS(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int cur_counter = 1;
