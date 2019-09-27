@@ -1,3 +1,5 @@
+package lc680;
+
 public class Solution680 {
     public boolean validPalindrome(String s) {
         int i = 0, j = s.length() - 1;
