@@ -48,3 +48,42 @@ public class Solution297 {
         }
     }
 }
+
+public class Solution {
+    private static String occupier = "X";
+    private static String splitter = ",";
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        StringBuilder builder = new StringBuilder();
+        doSerialize(root, builder);
+        return builder.toString();
+    }
+
+    private void doSerialize(TreeNode root, StringBuilder builder) {
+        if (root == null) builder.append(occupier).append(splitter);
+        else {
+            builder.append(root.val).append(splitter);
+            doSerialize(root.left, builder);
+            doSerialize(root.right, builder);
+        }
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        Deque<String> queue = new LinkedList<>();
+        queue.addAll(Arrays.asList(data.split(splitter)));
+        return doDeserialize(queue);
+    }
+
+    private TreeNode doDeserialize(Deque<String> queue) {
+        String curr = queue.remove();
+        if (curr.equals(occupier)) return null;
+        else {
+            TreeNode node = new TreeNode(Integer.parseInt(curr));
+            node.left = doDeserialize(queue);
+            node.right = doDeserialize(queue);
+            return node;
+        }
+    }
+}
