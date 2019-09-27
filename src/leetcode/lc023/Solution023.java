@@ -1,5 +1,8 @@
 package lc023;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class Solution023 {
 	public ListNode mergeKLists(ListNode[] lists){
 		return partition(lists, 0, lists.length-1);
@@ -37,4 +40,28 @@ class ListNode {
 	int val;
 	ListNode next;
 	ListNode(int x) { this.val = x; }
+}
+
+class Solution {
+	public ListNode mergeKLists(ListNode[] lists) {
+		if (lists == null || lists.length == 0) return null;
+		PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.val));
+		ListNode head = new ListNode(0);
+		ListNode cursor = head;
+
+		for (ListNode node : lists) {
+			if (node != null) pq.offer(node);
+		}
+
+		while (!pq.isEmpty()) {
+			cursor.next = pq.poll();
+			cursor = cursor.next;
+
+			if (cursor.next != null) {
+				pq.offer(cursor.next);
+			}
+		}
+
+		return head.next;
+	}
 }
