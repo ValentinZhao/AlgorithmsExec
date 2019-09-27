@@ -42,12 +42,21 @@ class Solution {
             parent = new int[n];
         }
 
+        /**
+         * 寻找祖先时采用递归，但是一旦元素一多起来，或退化成一条链，每次GetFather都将会使用O（n）的复杂度，这显然不是我们想要的。
+         * 对此，我们必须要进行路径压缩，即我们找到最久远的祖先时“顺便”把它的子孙直接连接到它上面。这就是路径压缩了。
+         */
         public int find(int v, int[] sets) {
             if (sets[v] == 0) return v; // 当连通分量root集合中并未找到该点的root时，就认为root是它自己
             sets[v] = find(sets[v], sets); // path compression
             return sets[v];
         }
 
+        /**
+         * 该方法使用秩来表示树高度的上界，在合并时，总是将具有较小秩的树根指向具有较大秩的树根。
+         * 简单的说，就是总是将比较矮的树作为子树，添加到较高的树中。为了保存秩，需要额外使用一个与 uset 同长度的数组，并将所有元素都初始化为 0。
+         * 这样找祖先会减少递归迭代的次数，最坏只有logN次。
+         */
         public boolean union(int x, int y) {
             int rootX = find(x, parent);
             int rootY = find(y, parent);

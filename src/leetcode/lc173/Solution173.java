@@ -14,15 +14,15 @@ public class Solution173 {
         public BSTIterator(TreeNode root) {
             queue = new LinkedList<>();
             stack = new Stack<>();
-            stack.push(root);
-            while (root != null && !stack.isEmpty()) {
-                while (root != null) {
+            while (root != null || !stack.isEmpty()) {
+                if (root != null) {
                     stack.push(root);
                     root = root.left;
+                } else {
+                    root = stack.pop();
+                    queue.offer(root.val);
+                    root = root.right;
                 }
-                root = stack.pop();
-                queue.offer(root.val);
-                root = root.right;
             }
         }
 

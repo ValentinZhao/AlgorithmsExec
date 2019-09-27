@@ -91,3 +91,94 @@ class Solution {
         return parents.get(p).equals(p) ? p : find(parents.get(p), parents);
     }
 }
+
+/**
+ * 这里记录一个更加直观，也更加完整的Union Find实现
+ */
+class Solution3rd {
+    public List<List<String>> accountsMerge(List<List<String>> accounts) {
+        if (accounts == null) return null;
+        List<List<String>> res = new ArrayList<>();
+        int n = accounts.size();
+        UnionFind uf = new UnionFind(n);
+        // 第一步把所有的邮箱地址和他所属的账号位置(i)进行一个映射
+        // 目的是，让之后出现的相同的邮箱地址可以用find找到当前的这个index位置
+        // 为此，我们对于所有用containsKey找到的邮箱，使用union把它们关联起来
+        Map<String, Integer> mailToIndex = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < accounts.get(i).size(); j++) {
+                String curMail = accounts.get(i).get(j);
+                if (mailToIndex.containsKey(curMail)) {
+                    int prevIndex = mailToIndex.get(curMail);
+                    uf.union(prevIndex, i);
+                } else {
+                    mailToIndex.put(curMail, i);
+                }
+            }
+        }
+
+        // 第二步是，直接建立并查集，为所有的parent建立一个映射
+        // 他应该是一个map<parentRoot, Set<Emails>>，表示连通分量的集合
+        // 我们通过遍历所有账户下的emails的方法，把所有同一账户下的邮箱都扔到同一个parentId下
+        // 这样做的理由是，在同一账户下的邮箱本来就是连接在一起的
+        // 但是在后面find parent的时候有可能找到的是同一个Set，那么这时候就放在一起了
+        // 同时又因为是Set，所以后面有重复的也不怕
+        Map<Integer, Set<String>> disjointSet = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            // 注意，建立的UnionFind是关于所有账户index的，而不是某个邮箱，所以找的时候也是用账户index来找
+            int parentIdx = uf.find(i);
+            disjointSet.putIfAbsent(parentIdx, new HashSet<>());
+            Set<String> set = disjointSet.get(parentIdx);
+            // 取出来set，然后把相同parent账户下的所有邮箱塞进去
+            for (int j = 1; j < accounts.get(i).size(); j++) {
+                set.add(accounts.get(i).get(j));
+            }
+            disjointSet.put(parentIdx, set);
+        }
+        // 第三步，遍历并查集，把所有元素取出来怼到一个temp list里，排序，再怼回结果list中
+        // 最后终于结束了...
+        for (int key : disjointSet.keySet()) {
+            List<String> temp = new ArrayList<>();
+            temp.addAll(disjointSet.get(key));
+            Collections.sort(temp);
+            // 这里就能看出使用所有账户的index进行uf是很巧妙的
+            // 它保证了我们在这里之遍历到具有不同连通分量的账户index
+            temp.add(0, accounts.get(key).get(0));
+            res.add(temp);
+        }
+        return res;
+    }
+
+    class UnionFind {
+        int[] rank;
+        int[] parents;
+
+        public UnionFind(int n) {
+            rank = new int[n];
+            parents = new int[n];
+
+            // 所有人初始化parent都是自己
+            for (int i = 0; i < n; i++) {
+                parents[i] = i;
+            }
+        }
+
+        public int find(int v) {
+            if (v != parents[v]) {
+                parents[v] = find(parents[v]);
+            }
+            return parents[v];
+        }
+
+        public void union(int a, int b) {
+            int p1 = find(a);
+            int p2 = find(b);
+            if (rank[p1] > rank[p2]) parents[p1] = p2;
+            else if (rank[p1] < rank[p2]) parents[p2] = p1;
+            else {
+                parents[p1] = p2;
+                rank[p2]++;
+            }
+        }
+    }
+}
