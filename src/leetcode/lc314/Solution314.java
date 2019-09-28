@@ -42,3 +42,41 @@ public class Solution314 {
         return res;
     }
 }
+
+
+// 简单来说就是永cols完整映射queue而已
+class Solution {
+    public List<List<Integer>> verticalOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        // col -> list
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<Integer> cols = new LinkedList<>();
+        int min = 0, max = 0;
+        queue.offer(root);
+        cols.offer(0);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            int col = cols.poll();
+            if (!map.containsKey(col)) {
+                map.put(col, new ArrayList<>());
+            }
+            map.get(col).add(node.val);
+            if (node.left != null) {
+                queue.offer(node.left);
+                cols.offer(col - 1);
+                min = Math.min(min, col - 1);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+                cols.offer(col + 1);
+                max = Math.max(max, col + 1);
+            }
+        }
+        // 要包括max，毕竟max这一列也是被记录过的
+        for (int i = min; i <= max; i++) {
+            res.add(map.get(i));
+        }
+        return res;
+    }
+}
