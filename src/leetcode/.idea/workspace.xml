@@ -92,11 +92,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lc896/Solution896.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="304">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lc825/Solution825.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -110,15 +119,6 @@
                 <element signature="e#2008#2009#0" expanded="true" />
                 <element signature="e#2068#2069#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lc684/Solution684.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -179,7 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lc542/Solution542.java" />
         <option value="$PROJECT_DIR$/lc743/Solution743.java" />
         <option value="$PROJECT_DIR$/lc417/Solution417.java" />
         <option value="$PROJECT_DIR$/lc863/Solution863.java" />
@@ -230,6 +229,7 @@
         <option value="$PROJECT_DIR$/lc438/Solution438.java" />
         <option value="$PROJECT_DIR$/lc986/Solution986.java" />
         <option value="$PROJECT_DIR$/lc896/Solution896.java" />
+        <option value="$PROJECT_DIR$/lc825/Solution825.java" />
       </list>
     </option>
   </component>
@@ -877,16 +877,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lc759/Solution759.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lc198/Solution198.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -1262,8 +1252,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lc896/Solution896.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lc825/Solution825.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>
