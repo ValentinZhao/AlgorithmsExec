@@ -57,6 +57,8 @@ class Solution {
         Node head = new Node(node.val, new ArrayList<>());
         LinkedList<Node> queue = new LinkedList<>();
         Map<Integer, Node> map = new HashMap<>();
+        // 在map中我们存入了head的引用，后面map.get拿出来
+        // 再add neighbor的时候，就连接了起来
         map.put(head.val, head);
         queue.offer(node);
         while (!queue.isEmpty()) {

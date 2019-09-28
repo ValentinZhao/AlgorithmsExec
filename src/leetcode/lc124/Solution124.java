@@ -44,7 +44,10 @@ class Solution {
         if (root == null) return 0;
         int left = Math.max(0, findGreaterSum(root.left));
         int right = Math.max(0, findGreaterSum(root.right));
+        // 计算路径和的时候，使用左+右+根的和
         maxValue = Math.max(maxValue, left + right + root.val);
+        // 返回的时候，我们需要返回的是，左或右的较大值，毕竟在递归中
+        // 我们最后也是分别给left和right来取最大值
         return Math.max(left, right) + root.val;
     }
 }
