@@ -20,7 +20,6 @@ public class Solution161 {
                 }
             }
         }
-        
         // 两个都是空串的话，要这样判断
         return (ns + 1 == nt);
     }
