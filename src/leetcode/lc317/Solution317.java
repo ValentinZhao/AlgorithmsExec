@@ -60,6 +60,8 @@ public class Solution317 {
                         reach[curX][curY]++;
                         visited[curX][curY] = true;
                         queue.offer(new int[]{curX, curY});
+                        // dist是采用每一步都累加的方式，是因为
+                        // dist[i][j]就直接表示了从这一点navigate到所有房子的距离和，所以是这样的计算方式（不证明了，知道是啥就行）
                         dist[curX][curY] += step;
                     }
                 }
