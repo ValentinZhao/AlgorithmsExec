@@ -45,3 +45,32 @@ class Solution031 {
         num[j]=temp;
     }
 }
+
+/**
+ * 基本思路就是，从后往前找第一个元素，比前一个大的（因为这一段很有可能是123431这样的拱形）
+ * 找到后从i到尾部进行两两swap，这样得到两段increasing sorted的数组
+ * 最后从i开始（当i大于0）和后面的部分进行swap，似的最后全部排序完成
+ * 判断大于零的理由是，如果i等于零了，这证明我们从第一步开始就发现了他是个完全逆序的数组
+ * 那么在第二步的时候已经reverse过来了，不需要再搞
+ */
+class Solution {
+    public void nextPermutation(int[] nums) {
+        int i = nums.length - 1, k = i;
+        while (i > 0 && nums[i] <= nums[i-1]) i--;
+        for (int j = i; j < k; j++, k--) {
+            swap(nums, j, k);
+        }
+        if (i > 0) {
+            k = i--; // k到原来i的位置，i往前一位
+            while (nums[k] <= nums[i]) k++;
+            swap(nums, k, i);
+        }
+    }
+
+    public void swap(int[] num, int i, int j) {
+        int temp = 0;
+        temp=num[i];
+        num[i]=num[j];
+        num[j]=temp;
+    }
+}
