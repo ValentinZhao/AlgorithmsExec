@@ -53,6 +53,8 @@ class Solution {
         Queue<TreeNode> queue = new LinkedList<>();
         Queue<Integer> cols = new LinkedList<>();
         int min = 0, max = 0;
+        // 就是保证queue和col是同步的，poll出一个node的同时，也poll出一个col
+        // 其实也可以用一个queue，维护一个pair，不过都一样（这是我最开始的想法）
         queue.offer(root);
         cols.offer(0);
         while (!queue.isEmpty()) {
