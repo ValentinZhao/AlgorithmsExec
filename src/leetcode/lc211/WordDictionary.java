@@ -49,3 +49,52 @@ public class WordDictionary {
         public String item = "";
     }
 }
+
+class Solution {
+
+    private TrieNode root = new TrieNode();
+    /** Adds a word into the data structure. */
+    public void addWord(String word) {
+        // 设置一个node作为cursor，其实Trie的一条路径就是个链表
+        // node不断向下传递才能把一条链整理出来
+        // 其实children才是TrieNode向下的节点
+        TrieNode node = root;
+        char[] chs = word.toCharArray();
+        for (char c : chs) {
+            if (node.children[c-'a'] == null) {
+                node.children[c-'a'] = new TrieNode();
+            }
+            // 让node作为某个children的节点，就相当于向下了
+            node = node.children[c-'a'];
+        }
+        node.isWord = true;
+    }
+
+    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
+    public boolean search(String word) {
+        char[] chs = word.toCharArray();
+        return match(chs, 0, root);
+    }
+
+    private boolean match(char[] chs, int idx, TrieNode node) {
+        if (idx == chs.length) {
+            return node.isWord;
+        }
+
+        if (chs[idx] != '.') {
+            return node.children[chs[idx]-'a'] != null && match(chs, idx + 1, node.children[chs[idx]-'a']);
+        } else {
+            for (int i = 0; i < node.children.length; i++) {
+                if (node.children[i] != null && match(chs, idx + 1, node.children[i])) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    class TrieNode {
+        TrieNode[] children = new TrieNode[26];
+        boolean isWord = false;
+    }
+}
