@@ -47,7 +47,7 @@ public class Solution673 {
 class Solution {
     public int findNumberOfLIS(int[] nums) {
         int n = nums.length;
-        int maxLen = 0;\int res = 0;
+        int maxLen = 0;int res = 0;
         int[] len = new int[n], cnt = new int[n];
         for (int i = 0; i < n; i++) {
             len[i] = cnt[i] = 1;
