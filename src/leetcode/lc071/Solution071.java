@@ -22,3 +22,20 @@ public class Solution071 {
         return res.isEmpty() ? "/" : res;
     }
 }
+
+class Solution {
+    public String simplifyPath(String path) {
+        // 连续的///会被分成连续个空串
+        Set<String> set = new HashSet<>(Arrays.asList("..", ".", ""));
+        Stack<String> stack = new Stack<>();
+        for (String dir : path.split("/")) {
+            if (!stack.isEmpty() && dir.equals("..")) stack.pop();
+            else if (!set.contains(dir)) stack.push(dir);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (String dir : stack) sb.append("/").append(dir);
+        String res = sb.toString();
+        return res.isEmpty() ? "/" : res;
+    }
+}
