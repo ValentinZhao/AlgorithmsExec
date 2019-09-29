@@ -96,3 +96,53 @@ class Solution {
         buildGraph(root.right, root);
     }
 }
+
+/**
+ * 第三次写了，主要就注意一下buildGraph的写法，他是传child节点和自己到下一层
+ * 连接的就是自己和parent的一个双向图
+ * 只要parent或者当前node为空就不连接
+ */
+class Solution3 {
+    private static Map<TreeNode, List<TreeNode>> map = new HashMap<>();
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+        buildGraph(root, null);
+        Queue<TreeNode> queue = new LinkedList<>();
+        Set<TreeNode> set = new HashSet<>();
+        queue.offer(target);
+        set.add(target);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            if (K == 0) {
+                for (int i = 0; i < size; i++) {
+                    res.add(queue.poll().val);
+                    return res;
+                }
+            }
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                for (TreeNode n : map.get(node)) {
+                    if (set.contains(n)) continue;
+                    set.add(n);
+                    queue.offer(n);
+                }
+            }
+            K--;
+        }
+        return res;
+    }
+
+    private void buildGraph(TreeNode node, TreeNode parent) {
+        if (node == null) return;
+        if (!map.containsKey(node)) {
+            map.put(node, new ArrayList<>());
+            if (parent != null) {
+                map.get(node).add(parent);
+                map.get(parent).add(node);
+            }
+        }
+        buildGraph(node.left, node);
+        buildGraph(node.right, node);
+    }
+}
