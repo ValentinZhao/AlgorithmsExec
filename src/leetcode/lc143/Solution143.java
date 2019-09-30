@@ -43,3 +43,42 @@ public class Solution143 {
         return prev;
     }
 }
+
+class Solution {
+    public void reorderList(ListNode head) {
+        ListNode fast = head, slow = head, prev = head;
+        while (fast != null && fast.next != null) {
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        prev.next = null;
+
+        ListNode n2 = reverseLinkedList(slow);
+        mergeList(head, n2);
+    }
+
+    // n1肯定比n2多一位或者相等长度
+    // 所以不用特别检测n2是不是null
+    private void mergeList(ListNode n1, ListNode n2) {
+        while (n1 != null) {
+            ListNode next1 = n1.next, next2 = n2.next;
+            n1.next = n2;
+            if (next1 == null) break;
+            n2.next = next1;
+            n1 = next1;
+            n2 = next2;
+        }
+    }
+
+    private ListNode reverseLinkedList(ListNode root) {
+        ListNode prev = null;
+        while (root != null) {
+            ListNode next = root.next;
+            root.next = prev;
+            prev = root;
+            root = next;
+        }
+        return prev;
+    }
+}
