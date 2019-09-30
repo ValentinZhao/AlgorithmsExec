@@ -25,3 +25,24 @@ public class Solution043 {
         return builder.length() == 0 ? "0" : builder.toString();
     }
 }
+
+class Solution {
+    public String multiply(String num1, String num2) {
+        char[] chs1 = num1.toCharArray();
+        char[] chs2 = num2.toCharArray();
+        int m = chs1.length, n = chs2.length;
+        int[] res = new int[m + n];
+        for (int i = m - 1; i >= 0; i--) {
+            for (int j = n - 1; j >= 0; j--) {
+                int mul = (chs1[i] - '0') * (chs2[j] - '0');
+                int sum = mul + res[i+j+1];
+                res[i+j+1] = sum % 10;
+                res[i+j] += sum / 10;
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int i : res) if (!(i == 0 && sb.length() == 0)) sb.append(i);
+        return sb.length() == 0 ? "0" : sb.toString();
+    }
+}

@@ -7,7 +7,7 @@ package lc50;
  */
 public class Solution50 {
     public double myPow(double x, int n) {
-        if (n == 1) return 1;
+        if (n == 0) return 1;
         if (n == Integer.MIN_VALUE) {
             n = Integer.MAX_VALUE - 1;
             x = 1 / x;
@@ -23,7 +23,7 @@ public class Solution50 {
 
 class Solution {
     public double myPow(double x, int n) {
-        if (n == 1) return 1;
+        if (n == 0) return 1;
         if (n == Integer.MIN_VALUE) {
             n = Integer.MAX_VALUE - 1;
             x = 1 / x;
