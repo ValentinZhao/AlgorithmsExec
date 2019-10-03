@@ -1,5 +1,7 @@
 package lc032;
 
+import java.util.Stack;
+
 /**
  * dp题，主要是一个公式，设dp[i]是以i为结尾的子串的最长valid parentheses长度，那么当s[i]为'('时，那dp[i]一定是0，因为它本身不能组成valid的
  * 如果是')'，就要比对它前面一个字符是啥，如果是'('那么i-1和i就正好组成一对；如果还是')'那么就遇到了嵌套parentheses
@@ -20,5 +22,26 @@ public class Solution032 {
             }
         }
         return curMax;
+    }
+}
+
+class Solution {
+    public int longestValidParentheses(String s) {
+        int maxans = 0;
+        Stack<Integer> stack = new Stack<>();
+        stack.push(-1);
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
+                stack.push(i);
+            } else {
+                stack.pop();
+                if (stack.empty()) {
+                    stack.push(i);
+                } else {
+                    maxans = Math.max(maxans, i - stack.peek());
+                }
+            }
+        }
+        return maxans;
     }
 }
