@@ -49,7 +49,7 @@ public class Solution297 {
     }
 }
 
-public class Solution {
+class Solution {
     private static String occupier = "X";
     private static String splitter = ",";
 
