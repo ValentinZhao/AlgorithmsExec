@@ -1,3 +1,12 @@
+package lc987;
+
+import TreeNode.TreeNode;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.TreeMap;
+
 public class Solution987 {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();

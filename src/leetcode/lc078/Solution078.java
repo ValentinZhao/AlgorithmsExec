@@ -14,6 +14,7 @@ public class Solution078 {
 
     private void backtracking(List<List<Integer>> list, List<Integer> tempList, int[] nums, int start) {
         list.add(new ArrayList<>(tempList));
+        System.out.println(new ArrayList<>(tempList));
         for (int i = start; i < nums.length; i++) {
             tempList.add(nums[i]);
             // 每次backtracking都是传入i+1，意思就是递归探查出多一个tempList元素下的所有情况，每次递归就加一个元素

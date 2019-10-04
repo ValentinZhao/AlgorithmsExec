@@ -94,7 +94,7 @@ class Solution3nd {
             while (left < right && getDistance(points[left], pivot) <= 0) left++;
             points[right] = points[left];
         }
-        points[left] = points[pivot];
+        points[left] = points[pivot[left]];
         return left;
     }
 
