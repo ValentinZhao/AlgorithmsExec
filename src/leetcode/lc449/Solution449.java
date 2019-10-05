@@ -36,7 +36,7 @@ public class Solution449 {
         if (data == NULL) return null;
         String[] strs = data.split(SEP);
         Queue<String> queue = new LinkedList<>(Arrays.asList(strs));
-        // 简单来说，前面inorder的逻辑都一样个LC297，但建树的时候我们不需要记录null
+        // 建树的时候我们不需要记录null
         // 我们只需要跟root比较大小，小的一半推进一个queue，大的一半在另一个queue，再递归
         return buildBST(queue);
     }
