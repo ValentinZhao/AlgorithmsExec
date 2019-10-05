@@ -1,15 +1,13 @@
-package RandomizedSet;
+package lc380;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
+import java.util.*;
 
-public class RandomizedSet {
+class Solution380 {
     private ArrayList<Integer> nums;
     private HashMap<Integer, Integer> loc_map;
 
     /** Initialize your data structure here. */
-    public RandomizedSet() {
+    public Solution380() {
         nums = new ArrayList<>();
         loc_map = new HashMap<>();
     }
@@ -17,6 +15,7 @@ public class RandomizedSet {
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     public boolean insert(int val) {
         if (loc_map.containsKey(val)) return false;
+        // 这个地方，在map中存num size，其实就是记录了最后自己在array中的位置，方便复制和推出
         loc_map.put(val, nums.size());
         nums.add(val);
         return true;
