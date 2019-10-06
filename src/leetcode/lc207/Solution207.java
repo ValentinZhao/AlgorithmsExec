@@ -38,3 +38,37 @@ public class Solution207 {
         return false;
     }
 }
+
+class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        List<List<Integer>> graph = new ArrayList<>();
+        for (int i = 0; i < numCourses; i++) {
+            graph.add(new ArrayList<>());
+        }
+
+        for (int[] prerequisite : prerequisites) {
+            graph.get(prerequisite[0]).add(prerequisite[1]);
+        }
+
+        int[] visit = new int[numCourses];
+        for (int i = 0; i < numCourses; i++) {
+            if (checkInnerLoopDFS(graph, visit, i)) return false;
+        }
+
+        return true;
+
+
+    }
+
+    private boolean checkInnerLoopDFS(List<List<Integer>> graph, int[] visit, int course) {
+        if (visit[course] == 1) return true;
+        if (visit[course] == 2) return false;
+
+        visit[course] = 1;
+        for (int pre : graph.get(course)) {
+            if (checkInnerLoopDFS(graph, visit, pre)) return true;
+        }
+        visit[course] = 2;
+        return false;
+    }
+}
