@@ -48,3 +48,52 @@ public class Solution138 {
     }
 }
 
+class Solution {
+    class Node {
+        public int val;
+        public Node next;
+        public Node random;
+
+        public Node() {}
+
+        public Node(int _val,Node _next,Node _random) {
+            val = _val;
+            next = _next;
+            random = _random;
+        }
+    };
+
+    public Node copyRandomList(Node head) {
+        Node iter = head, next;
+        while (iter != null) {
+            next = iter.next;
+            Node copy = new Node(iter.val, null, null);
+            iter.next = copy;
+            copy.next = next;
+            iter = next;
+        }
+
+        iter = head;
+        while (iter != null) {
+            if (iter.random != null) {
+                iter.next.random = iter.random.next;
+            }
+            iter = iter.next.next;
+        }
+
+        Node dummy = new Node(0, null, null);
+        Node copy, copyIter = dummy;
+        iter = head;
+
+        while (iter != null) {
+            next = iter.next.next; // 保存原链表next指针
+            copy = iter.next; // 找到copy链表的下一位
+            copyIter.next = copy; // copyIter是从copy链表的伪造头开始遍历的一个指针，一开始是dummy，那么dummy.next势必应该指向copy链表的下一位
+            copyIter = copy; // 移动copyIter
+            iter.next = next; // 恢复原数组
+            iter = next; // 移动原数组指针
+        }
+        return dummy.next;
+    }
+}
+
