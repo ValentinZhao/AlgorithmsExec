@@ -1,3 +1,5 @@
+package lc117;
+
 /**
  * Given the following binary tree,
  *
@@ -52,3 +54,9 @@ public class Solution117 {
         }
     }
 }
+
+class TreeLinkNode {
+     int val;
+     TreeLinkNode left, right, next;
+     TreeLinkNode(int x) { val = x; }
+ }

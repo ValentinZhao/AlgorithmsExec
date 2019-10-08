@@ -39,6 +39,8 @@ class Solution {
             res.add(new ArrayList<>(tempList));
             return;
         } else {
+            // 从start开始是很巧妙的，比如一开始是0，那么就会一直递归0，就可以完成说[2,2,2,2] target = 8的combination
+            // 然后比如说已经有了[2,3]的搭配，为了避免出现[3,2]的重复，所以我们使得循环开始的i = start，这样就能保证前面前缀不变的情况下只回溯后面的
             for (int i = start; i < candidates.length; i++) {
                 tempList.add(candidates[i]);
                 backtracking(res, tempList, candidates, remain - candidates[i], i);
