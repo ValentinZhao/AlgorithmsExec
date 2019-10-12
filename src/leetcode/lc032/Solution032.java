@@ -28,6 +28,7 @@ public class Solution032 {
 class Solution {
     public int longestValidParentheses(String s) {
         int maxans = 0;
+        String maxStr;
         Stack<Integer> stack = new Stack<>();
         stack.push(-1);
         for (int i = 0; i < s.length(); i++) {
@@ -39,6 +40,8 @@ class Solution {
                     stack.push(i);
                 } else {
                     maxans = Math.max(maxans, i - stack.peek());
+                    // 由于这里有坐标了，如果要应对FB的followup，我们直接用substring取这一段，就能返回最长的这段了
+                    maxStr = s.substring(stack.peek(), i);
                 }
             }
         }

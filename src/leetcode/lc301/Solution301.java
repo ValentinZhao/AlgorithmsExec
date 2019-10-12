@@ -64,7 +64,7 @@ class Solution {
             }
             if (found) continue;
             for (int i = 0; i < curr.length(); i++) {
-                while (curr.charAt(i) != '(' && curr.charAt(i) != '(') continue;
+                while (curr.charAt(i) != '(' && curr.charAt(i) != ')') continue;
                 String temp = curr.substring(0, i) + curr.substring(i+1);
                 if (!set.contains(temp)) {
                     queue.offer(temp);
