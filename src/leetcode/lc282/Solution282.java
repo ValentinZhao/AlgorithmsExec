@@ -82,7 +82,7 @@ class Solution {
             // 然后charAt(pos)却还是0的话，这说明我们在处理一个以0开头的字符串
             // 因为后面我们要用pos为起始，不断地backtracking substring(pos, i+1)这个数字，然后再做一些运算
             // 所以当你想用0做一系列起始的时候，parseLong会报错
-            if (i != pos && num.charAt(pos) == '0') break;
+            if (i != pos && num.charAt(pos) == '0') break; // 再次注意这个地方，是pos走到1了才去检查index 0的地方是不是0！！
             long cur = Long.parseLong(num.substring(pos, i+1));
             // pos是0的话，这说明在这个func的最上层，我们只能先加一个数字进去
             if (pos == 0) {
