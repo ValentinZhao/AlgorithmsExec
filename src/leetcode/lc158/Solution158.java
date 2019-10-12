@@ -32,3 +32,26 @@ class Read4 {
         return 4;
     }
 }
+
+class Solution extends Read4 {
+    private int buffCounter = 0;
+    private int buffPointer = 0;
+    private char[] buff = new char[4];
+
+    public int read(char[] buf, int n) {
+        int pointer = 0;
+
+        while (pointer < n) {
+            if (buffCounter == 0) {
+                buffCounter = read4(buff);
+            }
+            if (buffCounter == 0) break;
+            while (pointer < n && buffPointer < buffCounter) {
+                buf[pointer++] = buff[buffPointer++];
+            }
+            if (buffPointer >= buffCounter) buffPointer = 0;
+        }
+
+        return pointer;
+    }
+}
