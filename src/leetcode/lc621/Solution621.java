@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 /**
  * https://leetcode.com/problems/task-scheduler/discuss/104496/concise-Java-Solution-O(N)-time-O(26)-space
+ *
+ * 关于公式的真正解释 https://www.cnblogs.com/grandyang/p/7098764.html
  */
 public class Solution621 {
     public int leastInterval(char[] tasks, int n) {
@@ -20,9 +22,10 @@ public class Solution621 {
         while(i >= 0 && c[i] == c[25]) i--;
 
         // 该公式含义为
-        // c[25]-1 是框架内的空缺数，这些空缺用来填充其他字母
-        // n + 1 空缺里又至少需要这么多的空位才能保证process之间有效冷却
-        // 25 - i 上面计算有一些重叠的部分，重叠的就是框架字母本身，所以去掉重叠
+        // 举例来说，ACCCEEE 2，这时候我们得到的答案其实是CEACEXCE
+        // 仔细观察可以发现，它的组成其实是，CEA + CEX + CE，有一个重复的pattern段，最后再加上top frequency的词作为框架的结尾
+        // 重复段的长度，正好就是n+1，重复段的次数正好是top frequency - 1（毕竟最后我们还要补上框架），最后再补上框架。当然框架可能有多个字母，所以是25-i
+        // 对应上面就是，重复段是CEA，长度 n+1 = 3，重复次数c[25]-1 = 2，框架本身CE长度为2，那么 2 * 3 + 2 = 8 -> CEACEXCE
         return Math.max(tasks.length, (c[25] - 1) * (n + 1) + 25 - i);
     }
 }
