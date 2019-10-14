@@ -1,6 +1,10 @@
 package lc029;
 
 // 查看一下handbook有除法的整体运算法则
+
+/**
+ * 简单再总结下，总而言之就是在divisor
+ */
 public class Solution029 {
     public int divide(int dividend, int divisor) {
         if (divisor == 0 || divisor == -1 && dividend == Integer.MIN_VALUE) return Integer.MAX_VALUE;

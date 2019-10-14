@@ -15,7 +15,7 @@ public class Solution670 {
                     chs[i] = chs[last[j]];
                     chs[last[j]] = tmp;
                     return Integer.valueOf(new String(chs));
-                }
+                 }
             }
         }
         return num;
