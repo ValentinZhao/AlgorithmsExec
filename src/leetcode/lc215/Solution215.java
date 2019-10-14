@@ -75,3 +75,28 @@ class Solution {
         A[j] = tmp;
     }
 }
+
+class Solution3 {
+    public int findKthLargest(int[] nums, int k) {
+        if (nums.length == 0 || nums == null) return Integer.MAX_VALUE;
+        return findKthLargest(nums, 0, nums.length-1, nums.length - k);
+    }
+
+    private int findKthLargest(int[] nums, int start, int end, int k) {
+        if (start > end) return Integer.MAX_VALUE;
+        int pivot = nums[end], left = start;
+        for (int i = start; i < end; i++) {
+            if (nums[i] <= pivot) swap(nums, left++, i);
+        }
+        swap(nums, left, end);
+        if (left == k) return nums[left];
+        else if (left > k) return findKthLargest(nums, start, left-1, k);
+        else return findKthLargest(nums, left+1, end, k);
+    }
+
+    private void swap(int[] A, int i, int j) {
+        int tmp = A[i];
+        A[i] = A[j];
+        A[j] = tmp;
+    }
+}
