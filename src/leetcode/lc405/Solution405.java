@@ -7,7 +7,7 @@ public class Solution405 {
         StringBuilder result = new StringBuilder();
         while (num != 0) {
             result.insert(0, hexMap[num & 15]);
-            // >>> 避免负数移位
+            // >>> 避免负数移位，相当于除16
             num >>>= 4;
         }
         return result.toString();
