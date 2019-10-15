@@ -51,3 +51,22 @@ class Solution {
         return Math.max(left, right) + root.val;
     }
 }
+
+class Solution3 {
+    private static int maxValue;
+    public int maxPathSum(TreeNode root) {
+        if (root == null) return 0;
+        greaterPath(root);
+        return maxValue;
+    }
+
+    private int greaterPath(TreeNode root) {
+        if (root == null) return 0;
+        int left = Math.max(0, greaterPath(root.left));
+        int right = Math.max(0, greaterPath(root.right));
+
+        maxValue = Math.max(maxValue, left + right + root.val);
+        return Math.max(left, right) + root.val;
+    }
+
+}

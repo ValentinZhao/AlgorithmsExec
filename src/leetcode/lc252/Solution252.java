@@ -1,3 +1,8 @@
+package lc252;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Solution252 {
     public boolean canAttendMeetings(int[][] intervals) {
           if (intervals == null)

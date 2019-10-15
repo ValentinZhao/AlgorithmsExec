@@ -1,3 +1,7 @@
+package lc977;
+
+import java.util.Arrays;
+
 public class Solution977 {
     public int[] sortedSquares(int[] A) {
         int N = A.length;

@@ -1,3 +1,7 @@
+package lc137;
+
+import java.util.HashMap;
+
 public class Solution137 {
   public int singleNumber(int[] nums) {
     HashMap<Integer, Integer> hashmap = new HashMap<>();
