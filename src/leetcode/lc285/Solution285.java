@@ -18,7 +18,7 @@ public class Solution285 {
             } else {
                 root = stack.pop();
                 if (p.val == max) return root;
-                max = root.val;
+                max = root.val; // 在这里记录一下当前的值，下一个循环时就是successor啦
                 root = root.right;
             }
         }

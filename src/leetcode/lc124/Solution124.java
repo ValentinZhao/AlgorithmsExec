@@ -56,6 +56,7 @@ class Solution3 {
     private static int maxValue;
     public int maxPathSum(TreeNode root) {
         if (root == null) return 0;
+        maxValue = Integer.MIN_VALUE;
         greaterPath(root);
         return maxValue;
     }
