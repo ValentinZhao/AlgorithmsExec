@@ -23,7 +23,7 @@ public class Solution105 {
             if (inorder[i] == root.val) inIndex = i;
         }
         root.left = buildTreeHelper(preStart+1, inStart, inIndex-1, preorder, inorder);
-        // 右子树开头是preStart + (inIndex - inStart + 1)
+        // 右子树开头是preStart + (inIndex - inStart + 1)，它相当于inIndex在PRE中的位置的下一个，就是右半边PRE的起始位啦
         root.right = buildTreeHelper(preStart + inIndex - inStart + 1, inIndex + 1, inEnd, preorder, inorder);
         return root;
     }
