@@ -62,6 +62,8 @@ public class Solution317 {
                         queue.offer(new int[]{curX, curY});
                         // dist是采用每一步都累加的方式，是因为
                         // dist[i][j]就直接表示了从这一点navigate到所有房子的距离和，所以是这样的计算方式（不证明了，知道是啥就行）
+                        // 其实也很简单，我们从房子出发，比如房子有三个，在三个方位向这个点出发的时候都有自己的dist to it
+                        // 所以在该点是要叠加的。最后dist[i][j]就是从i，j到所有房子的距离和
                         dist[curX][curY] += step;
                     }
                 }
