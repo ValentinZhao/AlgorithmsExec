@@ -23,3 +23,20 @@ public class Solution865 {
     }
 
 }
+
+class Solution {
+    public TreeNode subtreeWithAllDeepest(TreeNode root) {
+        return deepest(root).getValue();
+    }
+
+    private Pair<Integer, TreeNode> deepest(TreeNode root) {
+        if (root == null) return new Pair<>(0, null);
+        Pair<Integer, TreeNode> left = deepest(root.left);
+        Pair<Integer, TreeNode> right = deepest(root.right);
+
+        int l = left.getKey(), r = right.getKey();
+        int deepestHeight = Math.max(l, r);
+        TreeNode ancestor = l == r ? root : l > r ? left.getValue() : right.getValue();
+        return new Pair<>(deepestHeight+1, ancestor);
+    }
+}
