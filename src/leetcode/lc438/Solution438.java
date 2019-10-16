@@ -60,3 +60,22 @@ class Solution {
         return res;
     }
 }
+
+class Solution3 {
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> res = new ArrayList<>();
+        int left = 0, right = 0, counter = p.length();
+        int[] count = new int[256];
+        char[] chs = s.toCharArray();
+        for (char c : chs) count[c]++;
+
+        while (right < s.length()) {
+            if (count[chs[right++]]-- > 0) counter--;
+
+            if (counter == 0) res.add(left);
+
+            if (right - left == p.length() && count[chs[left++]]++ >= 0) counter++;
+        }
+        return res;
+    }
+}
