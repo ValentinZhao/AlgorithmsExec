@@ -32,3 +32,20 @@ public class Solution078 {
         }
     }
 }
+
+class Solution78 {
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        backtracking(nums, res, new ArrayList<>(), 0);
+        return res;
+    }
+
+    private void backtracking(int[] nums, List<List<Integer>> res, ArrayList<Integer> temp, int start) {
+        res.add(new ArrayList<>(temp));
+        for (int i = start; i < nums.length; i++) {
+            temp.add(nums[i]);
+            backtracking(nums, res, temp, start+1);
+            temp.remove(temp.size()-1);
+        }
+    }
+}
