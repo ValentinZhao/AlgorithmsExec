@@ -61,7 +61,7 @@ class Solution {
             next = _next;
             random = _random;
         }
-    };
+    }
 
     public Node copyRandomList(Node head) {
         Node iter = head, next;
