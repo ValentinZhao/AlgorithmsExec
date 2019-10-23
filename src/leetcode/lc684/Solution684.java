@@ -48,7 +48,7 @@ class Solution {
          */
         public int find(int v, int[] sets) {
             if (sets[v] == 0) return v; // 当连通分量root集合中并未找到该点的root时，就认为root是它自己
-            sets[v] = find(sets[v], sets); // path compression
+            sets[v] = find(sets[v], sets); // path compression，理解就是find最后一定会返回root值，那么这个时候就把sets[v]的root值直接给到了真正的root，不就压缩了么
             return sets[v];
         }
 

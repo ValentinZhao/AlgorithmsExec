@@ -45,3 +45,26 @@ public class Solution261 {
         return false;
     }
 }
+
+class Solution {
+    private int[] parents;
+    public boolean validTree(int n, int[][] edges) {
+        parents = new int[n];
+        for (int[] edge : edges) {
+            int x = find(edge[0]);
+            int y = find(edge[1]);
+
+            if (x == y) return false;
+
+            parents[x] = y;
+        }
+
+        return edges.length == n - 1;
+    }
+
+    public int find(int v) {
+        if (parents[v] == 0) return v;
+        parents[v] = find(parents[v]);
+        return parents[v];
+    }
+}
