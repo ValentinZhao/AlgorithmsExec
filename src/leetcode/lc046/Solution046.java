@@ -22,6 +22,21 @@ public class Solution046{
             }
         }
     }
+
+    // 给定一个数字返回所有0 - bound-1的permutation
+    private void getPermutations(List<List<Integer>> res, int bound, List<Integer> temp) {
+        if (temp.size() == bound) {
+            res.add(new ArrayList<>(temp));
+        } else {
+            for (int i = 0; i < bound; i++) {
+                if (temp.contains(i)) continue;
+                temp.add(i);
+                getPermutations(res, bound, temp);
+                temp.remove(temp.size()-1);
+            }
+
+        }
+    }
 }
 
 class Solution {
