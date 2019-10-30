@@ -48,6 +48,12 @@ public class Solution300 {
     }
 }
 
+/**
+ * 这个方法可以正确的计算LIS的长度，但其实我们得到的并不一直是正确的LIS
+ * 比如[1,5,8,108,9]
+ *
+ * 我们最后会用9替换掉108，虽然长度依然是4，但其实正确的LIS应该是[1,5,8,108]
+ */
 class Solution {
     public int lengthOfLIS(int[] nums) {
         if (nums.length == 0 || nums == null) return 0;
