@@ -7,8 +7,10 @@
       <excludeFolder url="file://$MODULE_DIR$/lc021" />
       <excludeFolder url="file://$MODULE_DIR$/lc155" />
       <excludeFolder url="file://$MODULE_DIR$/lc347" />
+      <excludeFolder url="file://$MODULE_DIR$/lc489" />
       <excludeFolder url="file://$MODULE_DIR$/lc655" />
       <excludeFolder url="file://$MODULE_DIR$/lc674" />
+      <excludeFolder url="file://$MODULE_DIR$/lc865" />
       <excludeFolder url="file://$MODULE_DIR$/lc961" />
       <excludeFolder url="file://$MODULE_DIR$/lc965" />
       <excludeFolder url="file://$MODULE_DIR$/twilio-oa" />
