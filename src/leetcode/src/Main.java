@@ -3,16 +3,15 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc078.Solution078;
+import lc833.Solution833;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution078 solution = new Solution078();
+        Solution833 solution = new Solution833();
         int[] data = new int[]{1,2,3,4};
 //        String data = "2*3-4*5";
         int[][] matrix = new int[][]{{1,1,1},{1,1,0},{1,0,1}};
@@ -26,7 +25,7 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        List<List<Integer>> result = solution.subsets(data);
+        String result = solution.findReplaceString("jjievdtjfb", new int[]{4,6,1}, new String[]{"md","tjgb","jf"}, new String[]{"foe", "oov", "e"});
 //        System.out.println("Input =====> " + Arrays.toString(datas));
         System.out.println("Input =====> " + Arrays.toString(matrix));
         System.out.println("Output =====> " + Arrays.asList(result));
