@@ -31,3 +31,32 @@ public class Solution410 {
         return dp[n][m];
     }
 }
+
+class Solution {
+    public int splitArray(int[] nums, int m) {
+        int lo = 0, hi = 0;
+
+        for (int n : nums) {
+            lo = Math.max(lo, n);
+            hi += n;
+        }
+
+        while (lo < hi) {
+            int mid = lo + (hi - lo) / 2;
+            int curr = 0, chunks = 1;
+            for (int n : nums) {
+                if (curr + n > mid) {
+                    chunks++;
+                    curr = 0;
+                }
+
+                curr += n;
+            }
+
+            if (chunks > m) lo = mid + 1;
+            else hi = mid;
+        }
+
+        return lo;
+    }
+}
