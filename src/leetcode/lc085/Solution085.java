@@ -1,6 +1,7 @@
 package lc085;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 /**
  * 我们知道形成完整的矩形要求很严苛，我们只能通过loop-loop来找y方向最长的连续1，左边界找最右，右边界找最左才能形成valid rectangle
@@ -44,5 +45,29 @@ public class Solution085 {
             }
         }
         return maxArea;
+    }
+}
+
+class Solution {
+    public int maximalRectangle(char[][] matrix) {
+        int rLen = matrix.length, cLen = rLen == 0 ? 0 : matrix[0].length, max = 0;
+        int[] h = new int[cLen+1];
+
+        for (int row = 0; row < rLen; row++) {
+            Stack<Integer> s = new Stack<Integer>();
+            s.push(-1);
+            for (int i = 0; i <= cLen ;i++) {
+                if(i < cLen && matrix[row][i] == '1')
+                    h[i] += 1;
+                else h[i] = 0;
+
+                // 如果当前高度并非最高，则不断用当前位置去计算最大值，并在最后推入该高度，把高于它的都出栈
+                while(s.peek() != -1 && h[i] < h[s.peek()]) {
+                    max = Math.max(max, h[s.pop()] * (i - s.peek() - 1));
+                }
+                s.push(i);
+            }
+        }
+        return max;
     }
 }
