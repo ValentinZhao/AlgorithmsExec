@@ -1,9 +1,6 @@
 package lc773;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 /**
  * For everyone who still does not understand why we should use this as direction pad: PUT 2X3 BOARD AS MATRIX instead of string ,even though we use indices in string as position. For instance, for 2x3 board [[1,0,2], [5,4,6]] it should be like
@@ -57,5 +54,40 @@ public class Solution773 {
         builder.setCharAt(i, s.charAt(j));
         builder.setCharAt(j, s.charAt(i));
         return builder.toString();
+    }
+}
+
+/**
+ * 这里有一个更加generic的方法，不局限于board的宽高，直接使用所有数字序列化字符串作为key来进行BFS
+ * 做法非常正统
+ */
+class Solution {
+    private static int[] dirs = new int[]{0, 1, 0, -1, 0};
+    public int slidingPuzzle(int[][] board) {
+        int height = board.length, width = board[0].length;
+        String s = Arrays.deepToString(board).replaceAll("\\[|\\]|,|\\s", ""); // [[1,2,3],[4,5,6]] -> "123456"
+        Queue<String> queue = new LinkedList<>(Arrays.asList(s));
+        Set<String> visited = new HashSet<>(queue);
+        int step = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            while (size > 0) {
+                String curr = queue.poll();
+                if (curr.equals("123450")) return step;
+                int i = curr.indexOf("0"), x = i / width, y = i % width; // get string index
+                for (int j = 0; j < 4; j++) {
+                    int r = x + dirs[j], c = y + dirs[j+1];
+                    if (r >= height || r < 0 || c >= width || c < 0) continue;
+                    char[] chs = curr.toCharArray();
+                    chs[i] = chs[r*width+c]; // r * width + c is the string index of board[r][c]
+                    chs[r*width+c] = '0';
+                    s = String.valueOf(chs);
+                    if (visited.add(s)) queue.offer(s);
+                }
+                size--;
+            }
+            step++;
+        }
+        return -1;
     }
 }
