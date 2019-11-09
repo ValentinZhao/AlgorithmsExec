@@ -2,10 +2,11 @@ package src;
 
 
 import TreeNode.TreeNode;
+import google.AllSubsequence;
 import lc002.Solution002.ListNode;
 import lc833.Solution833;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
@@ -25,10 +26,13 @@ public class Main {
 //        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
 //        ListNode res = solution.addTwoNumbers(l1, l2);
-        String result = solution.findReplaceString("jjievdtjfb", new int[]{4,6,1}, new String[]{"md","tjgb","jf"}, new String[]{"foe", "oov", "e"});
+//        String result = solution.findReplaceString("jjievdtjfb", new int[]{4,6,1}, new String[]{"md","tjgb","jf"}, new String[]{"foe", "oov", "e"});
 //        System.out.println("Input =====> " + Arrays.toString(datas));
-        System.out.println("Input =====> " + Arrays.toString(matrix));
-        System.out.println("Output =====> " + Arrays.asList(result));
+//        System.out.println("Input =====> " + Arrays.toString(matrix));
+        AllSubsequence all = new AllSubsequence();
+        List<List<Integer>> res = all.getAll("abcabc", "abc");
+        System.out.println("Result =====> " + res.toString());
+//        System.out.println("Output =====> " + Arrays.asList(result));
 //        System.out.println("=======INPUT=======");
 //        for (int i = 0; i < matrix.length; i++) {
 //            System.out.println(Arrays.toString(matrix[i]));
