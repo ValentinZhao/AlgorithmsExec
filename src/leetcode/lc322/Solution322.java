@@ -1,5 +1,7 @@
 package lc322;
 
+import java.util.Arrays;
+
 /**
  * 0-1背包问题，二维动态规划问题，可以降维
  * 我们利用遍历amount的方式，将dp[i]作为当前amount下的所有解得集合，那么在遍历到任意coin的值的时候
@@ -26,5 +28,23 @@ public class Solution322 {
                     dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
         }
         return dp[amount] == 0x7fffffff ? -1 : dp[amount];
+    }
+}
+
+class Solution {
+    public int coinChange(int[] coins, int amount) {
+        int[] dp = new int[amount+1];
+        Arrays.fill(dp, amount+1);
+        dp[0] = 0;
+
+        for (int i = 1; i <= amount; i++) {
+            for (int coin : coins) {
+                if (coin <= i) {
+                    dp[i] = Math.min(dp[i], dp[i-coin] + 1);
+                }
+            }
+        }
+
+        return dp[amount] > amount ? -1 : dp[amount];
     }
 }
