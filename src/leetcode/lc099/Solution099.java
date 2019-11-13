@@ -29,3 +29,36 @@ public class Solution099 {
         inorderTraversal(root.right);
     }
 }
+
+
+class Solution {
+    public void recoverTree(TreeNode root) {
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode x = null, y = null, pred = null;
+
+        // 注意这里是或！！不是与！！！
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            if (pred != null && root.val < pred.val) {
+                y = root;
+
+                // 如果你交换两个node你至少需要找到两个，那么这两个node.val都是小于前面node.val的
+                // 所以这里很巧妙就是说第一次找到时，x从null变为pred，此时还不需要退出因为要找第二个node，给到y
+                // 所以就是当x有值的时候就退出了
+                if (x == null) x = pred;
+                else break;
+            }
+
+            pred = root;
+            root = root.right;
+        }
+
+        int temp = x.val;
+        x.val = y.val;
+        y.val = temp;
+    }
+}
