@@ -1,60 +1,50 @@
 package nutanix;
 
+
 /**
- * There are certain parts of a fence which need to be painted. Tom wants to divide work in such a way that each person gets exactly 1 contiguous part of the fence to paint.
+ * Given a number, you have to represent this number as sum of minimum number of possible psuedobinary numbers.
+ * A number is said to be psuedobinary number if its decimal number consists of only two digits (0 and 1).
+ * Example: 11,10,101 are all psuedobinary numbers.
  *
- * Calculate number of ways in which Tom can divide the work. 2 ways are distinct if they don't have exactly the same number of of pieces allocated.
+ * Input : 44
+ * Output : 11 11 11 11
  *
- * Input:
- * n = Number of parts of fence
- * arr = State of the fence. 1 indicates that the part needs to be painted, 0 means it does not need to be painted.
+ * Explanation : 44 can be represented as sum of
+ * minimum 4 psuedobinary numbers as 11+11+11+11
  *
- * Test Cases:
- * n = 5, arr = 10101
- * Output = 4
+ * Input : 31
+ * Output : 11 10 10
  *
- * The ways to divide the fence are:
- * 10|10|1
- * 1|010|1
- * 10|1|01
- * 1|01|01
- *
- * n = 2, arr = 00
- * Output = 0
- * The fence does not need any painting
+ * Explanation : 31 can be represented as sum of
+ * minimum 3 psuedobinary numbers as 11+10+10
  */
-
-// 解法很简单，就是把所有1的位置记下来，然后把他们的距离差求积
-// 那么其实就是，我们可以自底向上看，10101的话，我们先看1010[1]，这时候只有一种分割1010|1
-// 那么倒数第二个1，就有10[101]，这时候我们发现有101|01和1010|1的分割，那其实就是取决于这中间有几个0，再加上1本身的长度就是可排列的种类数
-
 public class DeciBinaryNumbers {
-    public int countWays(int[] arr, int n) {
-        int pos[] = new int[n];
-        int p = 0, i;
-
-        // for loop for saving the
-        // positions of all 1s
-        for (i = 0; i < n; i++)
+    public static void psuedoBinary(int n)
+    {
+        // Repeat below steps until n > 0
+        while (n != 0)
         {
-            if (arr[i] == 1)
+            // calculate m (A number that has same
+            // number of digits as n, but has 1 in
+            // place of non-zero digits 0 in place
+            // of 0 digits)
+            int temp = n, m = 0, p = 1;
+            while(temp != 0)
             {
-                pos[p] = i + 1;
-                p++;
+                int rem = temp % 10;
+                temp = temp / 10;
+
+                if (rem != 0)
+                    m += p;
+
+                p *= 10;
             }
+
+            System.out.print(m + " ");
+
+            // subtract m from n
+            n = n - m;
         }
-
-        // If array contains only 0s
-        if (p == 0)
-            return 0;
-
-        int ways = 1;
-        for (i = 0; i < p - 1; i++)
-        {
-            ways *= pos[i + 1] - pos[i];
-        }
-
-        // Return the total ways
-        return ways;
+        System.out.println(" ");
     }
 }
