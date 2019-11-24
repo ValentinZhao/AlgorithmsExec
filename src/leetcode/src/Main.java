@@ -2,18 +2,15 @@ package src;
 
 
 import TreeNode.TreeNode;
-import google.AllSubsequence;
 import lc002.Solution002.ListNode;
-import lc833.Solution833;
-
-import java.util.List;
+import lc456.Solution456;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution833 solution = new Solution833();
-        int[] data = new int[]{1,2,3,4};
+        Solution456 solution = new Solution456();
+        int[] data = new int[]{-2,1,2,-2,1,2};
 //        String data = "2*3-4*5";
         int[][] matrix = new int[][]{{1,1,1},{1,1,0},{1,0,1}};
 //        int[][] matrix = new int[][]{{-1,3}};
@@ -29,9 +26,9 @@ public class Main {
 //        String result = solution.findReplaceString("jjievdtjfb", new int[]{4,6,1}, new String[]{"md","tjgb","jf"}, new String[]{"foe", "oov", "e"});
 //        System.out.println("Input =====> " + Arrays.toString(datas));
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
-        AllSubsequence all = new AllSubsequence();
-        List<List<Integer>> res = all.getAll("abcabc", "abc");
-        System.out.println("Result =====> " + res.toString());
+//        AllSubsequence all = new AllSubsequence();
+        boolean res = solution.find132pattern(data);
+        System.out.println("Result =====> " + res);
 //        System.out.println("Output =====> " + Arrays.asList(result));
 //        System.out.println("=======INPUT=======");
 //        for (int i = 0; i < matrix.length; i++) {
