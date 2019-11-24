@@ -17,15 +17,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lc079/Solution079.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lc991/Solution991.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -105,11 +96,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servicenow/FindFixPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" selection-start-line="3" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="266">
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lc866/Solution866.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -185,6 +185,7 @@
         <option value="$PROJECT_DIR$/lc472/Solution472.java" />
         <option value="$PROJECT_DIR$/lc1167/Solution1167.java" />
         <option value="$PROJECT_DIR$/servicenow/FindFixPoint.java" />
+        <option value="$PROJECT_DIR$/lc866/Solution866.java" />
       </list>
     </option>
   </component>
@@ -652,8 +653,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/servicenow/FindFixPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="266">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lc866/Solution866.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
