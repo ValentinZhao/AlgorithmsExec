@@ -143,4 +143,9 @@ public class LinearProbingHashTable
                 System.out.println(keys[i] +" "+ vals[i]);
         System.out.println();
     }
+
+    public String[] getKeys() {
+        return keys;
+    }
+
 }

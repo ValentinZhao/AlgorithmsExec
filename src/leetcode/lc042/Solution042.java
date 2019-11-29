@@ -49,12 +49,14 @@ class Solution2 {
         int left = 0, right = height.length - 1;
         int leftMax = 0, rightMax = 0;
         while (left <= right) {
-            if (height[left] <= height[right]) {
-                if (height[left] >= leftMax) leftMax = height[left];
+            // 只有左边大于右边当前高度时才动右边，否则左边一直推
+            // 实际上是因为右边其实还是取决于左边，具体证明不表
+            if (height[left] > height[right]) {
+                if (height[left] > leftMax) leftMax = height[left];
                 else volume += leftMax - height[left];
                 left++;
             } else {
-                if (height[right] >= rightMax) rightMax = height[right];
+                if (height[right] > rightMax) rightMax = height[right];
                 else volume += rightMax - height[right];
                 right--;
             }

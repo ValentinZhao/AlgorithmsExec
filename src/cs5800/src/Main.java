@@ -15,15 +15,15 @@ public class Main {
         for (int i = 0; i < 1; i++) {
             int cap = 8191;
 
-//            LinearProbingHashTable lp = new LinearProbingHashTable(8191);
-            DoubleHashingHashTable dh = new DoubleHashingHashTable(cap);
+            LinearProbingHashTable lp = new LinearProbingHashTable(8191);
+//            DoubleHashingHashTable dh = new DoubleHashingHashTable(cap);
             int seed = 10000;
 
             try {
                 Random random = new Random();
                 while (true) {
-//                    lp.insert(String.valueOf(random.nextInt(seed)), "texts");
-                    dh.insert(String.valueOf(random.nextInt(seed)), 111);
+                    lp.insert(String.valueOf(random.nextInt(seed)), "texts");
+//                    dh.insert(String.valueOf(random.nextInt(seed)), 111);
                 }
 
             } catch (Exception e) {
@@ -32,14 +32,13 @@ public class Main {
 //                System.out.println("当前load：" + lp.getSize() / cap);
             }
 
-            DoubleHashingHashTable.HashEntry[] table = dh.getTable();
+            String[] keys = lp.getKeys();
 
-            for (int j = 1; j < table.length; j++) {
-                DoubleHashingHashTable.HashEntry entry = table[j];
-                System.out.println("当前key：" + entry.getKey());
-                dh.get(entry.getKey());
+            for (int j = 0; j < keys.length; j++) {
+                System.out.println("当前key：" + keys[j]);
+                lp.get(keys[j]);
             }
-            System.out.println("当前map：" + dh.getMap());
+            System.out.println("当前map：" + lp.getMap());
 
         }
 
