@@ -3,13 +3,17 @@ package src;
 
 import TreeNode.TreeNode;
 import lc002.Solution002.ListNode;
-import lc456.Solution456;
+import lc126.Solution126;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
 //        TreeNode root = generateSampleTreeNode();
 //        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-        Solution456 solution = new Solution456();
+        Solution126 solution = new Solution126();
         int[] data = new int[]{-2,1,2,-2,1,2};
 //        String data = "2*3-4*5";
         int[][] matrix = new int[][]{{1,1,1},{1,1,0},{1,0,1}};
@@ -27,7 +31,7 @@ public class Main {
 //        System.out.println("Input =====> " + Arrays.toString(datas));
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
 //        AllSubsequence all = new AllSubsequence();
-        boolean res = solution.find132pattern(data);
+        List<List<String>> res = solution.findLadders("hit", "cog", new HashSet<>(Arrays.asList("hot","dot","dog","lot","log","cog")));
         System.out.println("Result =====> " + res);
 //        System.out.println("Output =====> " + Arrays.asList(result));
 //        System.out.println("=======INPUT=======");

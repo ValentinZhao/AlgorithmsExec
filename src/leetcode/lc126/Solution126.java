@@ -16,6 +16,8 @@ public class Solution126 {
         Map<String, List<String>> map = new HashMap<String, List<String>>();
 
         // build the map
+        // 由80和87行就知道，map只有在dict里面的单词被发现时才会put给一个属于它的list
+        // 这样我们就知道最后map中保存的就是，所有dict中的词和它下一步可以变换的词，当然可变换的词也是在dict内的
         helper(dict, set1, set2, map, false);
 
         List<List<String>> res = new ArrayList<List<String>>();
@@ -32,11 +34,15 @@ public class Solution126 {
             return false;
         }
 
+        // 选较长的是因为一会儿我们要根据start set也就是set1来进行遍历
         if (set1.size() > set2.size()) {
             return helper(dict, set2, set1, map, !flip);
         }
 
         // remove words on current both ends from the dict
+        // 已经在首尾set的单词不需要再检查是否能变过去
+        // 然后set1和set2的内容是不会发生改变的，也是作为dict来使用
+        // 同时这个set也方便我们做差集从dict中去掉某些词
         dict.removeAll(set1);
         dict.removeAll(set2);
 
@@ -45,6 +51,7 @@ public class Solution126 {
         boolean done = false;
 
         // set for the next level
+        // 找到了在dict里的一个词，塞到set里传到下一层，避免后面递归塞同样的单词
         Set<String> set = new HashSet<String>();
 
         // for each string in end 1
@@ -59,9 +66,12 @@ public class Solution126 {
                     String word = new String(chars);
 
                     // make sure we construct the tree in the correct direction
+                    // 所以一般来说key是变过的单词，value是起始的单词
                     String key = flip ? word : str;
                     String val = flip ? str : word;
 
+                    // 这个list其实就是一个像是回溯法的tempList，用来在调用栈中维护答案list
+                    // 一个单词有一个对应的list维护在map中，那么如果该单词原来有list就直接取出来了
                     List<String> list = map.containsKey(key) ? map.get(key) : new ArrayList<String>();
 
                     if (set2.contains(word)) {
