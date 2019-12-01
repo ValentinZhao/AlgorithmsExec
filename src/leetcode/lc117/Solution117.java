@@ -34,6 +34,8 @@ public class Solution117 {
                 // 这一行十分重要，它使得p向下移动了一行
                 // 因为一开始p是任意创建的node，p.next直接指向了cur.left的话，cur一开始是root
                 // 那么这就把p直接放在了cur.left的左侧，也就是 下一层最左节点的左边
+                // 再深入说，p永远在curP的下面一层，dummy永远在curP下面一层最左节点的左面保持位置
+                // 准备换行时给p提供指针（第55行）
                 p.next = curP.left;
                 p = p.next;
             }
@@ -41,6 +43,7 @@ public class Solution117 {
                 p.next = curP.right;
                 p = p.next;
             }
+            // curP的next是上一层已经建立好的，那么我们就直接向右这样子遍历
             if (curP.next != null) {
                 curP = curP.next;
             }
