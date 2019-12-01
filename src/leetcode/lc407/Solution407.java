@@ -36,6 +36,10 @@ public class Solution407 {
                 int col = cell.col + dir[1];
                 if (row < 0 || row >= m || col < 0 || col >= n || visited[row][col]) continue;
                 visited[row][col] = true;
+                // 一开始的时候，cell.height是从队里面pop出来的，它是边界高度，heightMap[row][col]才是内陆部分
+                // 那么由于是使用dirs加上来的一个坐标，那这个坐标一定是和当前cell接壤的一个位置，所以可以计算
+                // 那么你可以说推入pq之后我们就不知道他啥时候会被推出来，是的不过这无所谓啊
+                // 因为每次推出一个，我只会和它四个方向的位置进行计算，再入队，再由visited数组来控制重复入队，足够了
                 res += Math.max(0, cell.height - heightMap[row][col]);
                 queue.offer(new Cell(row, col, Math.max(cell.height, heightMap[row][col])));
             }

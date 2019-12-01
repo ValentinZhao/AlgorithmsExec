@@ -25,6 +25,7 @@ public class InvertedIndex {
             while (line != null) {
                 String[] words = line.split("\\W+");
                 for (String word : words) {
+                    if (word.isEmpty()) continue;
                     word = word.toLowerCase();
                     indices.putIfAbsent(word, new HashMap<>());
                     indices.get(word)
@@ -33,11 +34,13 @@ public class InvertedIndex {
                                           .getOrDefault(documentId, 0) + 1
                     );
                 }
+                line = buff.readLine();
 
-                // iterate all words again to put inverted list at the leaf
-                for (String word : words) {
-                    addWord(word, root, documentId);
-                }
+            }
+
+            // iterate all words again to put inverted list at the leaf
+            for (String word : indices.keySet()) {
+                addWord(word, root, documentId);
             }
 
         } catch (FileNotFoundException e) {
@@ -45,6 +48,10 @@ public class InvertedIndex {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public TrieNode getRoot() {
+        return root;
     }
 
     private void addWord(String word, TrieNode root, int documentId) {
@@ -57,17 +64,31 @@ public class InvertedIndex {
             ws = ws.children[c-'a'];
         }
         // invertedList -> [[id1, occurrence1], [id2, occurrence2], ...]
-        ws.invertedList.add(Arrays.asList(documentId, indices.get(word).get(documentId)));
+        if (indices.get(word).get(documentId) != null)
+            ws.invertedList.add(Arrays.asList(documentId, indices.get(word).get(documentId)));
         ws.isWord = true;
     }
+    
+    public List<List<Integer>> search (String word) {
+        TrieNode ws = getRoot();
+        List<List<Integer>> res = null;
+        char[] chs = word.toCharArray();
+        for (int i = 0; i < chs.length; i++) {
+            if (ws.children[chs[i]-'a'] == null) return res;
+            else ws = ws.children[chs[i]-'a'];
+        }
 
-    class TrieNode {
-        boolean isWord;
-        TrieNode[] children;
+        return ws.invertedList;
+        
+    }
+
+    public class TrieNode {
+        public boolean isWord;
+        public TrieNode[] children;
         // invertedList -> [[id1, occurrence1], [id2, occurrence2], ...]
-        List<List<Integer>> invertedList;
+        public List<List<Integer>> invertedList;
 
-        TrieNode() {
+        public TrieNode() {
             children = new TrieNode[26];
             isWord = false;
             invertedList = new ArrayList<>();
