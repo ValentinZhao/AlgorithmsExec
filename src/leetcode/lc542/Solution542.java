@@ -28,6 +28,8 @@ public class Solution542 {
                 int x = cell[0] + dir[0];
                 int y = cell[1] + dir[1];
                 if (x < 0 || x >= row || y < 0 || y >= col ||
+                    // 这个判断是说，matrix[x][y]其实不是MAX_VALUE就是某个非0数
+                        // 那我们找的是最短距离，如果这一步的距离比我原来的距离还远，说明这个path我们是不需要的
                     matrix[x][y] <= matrix[cell[0]][cell[1]] + 1) continue;
                 // 找到这个递增点了，塞入队列下一轮可以从他开始
                 queue.offer(new int[]{x, y});

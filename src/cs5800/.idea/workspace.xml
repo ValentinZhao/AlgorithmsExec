@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afef12b5-cb22-4bdc-8fe1-e664b14105ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/neu/cs5800/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/neu/cs5800/InvertedIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/neu/cs5800/InvertedIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../leetcode/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode/lc407/Solution407.java" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode/lc407/Solution407.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leetcode/lc033/Solution033.java" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode/lc033/Solution033.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leetcode/lc542/Solution542.java" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode/lc542/Solution542.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leetcode/lc743/Solution743.java" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode/lc743/Solution743.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

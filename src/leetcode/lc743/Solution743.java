@@ -52,6 +52,9 @@ public class Solution743 {
         while (!minHeap.isEmpty()) {
             int[] cur = minHeap.poll();
             if (!visited.add(cur[0])) continue;
+            // 这样的话，由于一个点访问所有邻居是**同时**的，那么我们计算遍历全部点最长时间
+            // 其实就是找路径最长路径所花费的时间，一个点到它的所有邻居花费时间只有最大的那一条的时间，而不是全部时间的累和
+            // 累和的状况只有一条路径不断向下进入
             dist = cur[1];
             for (int[] neighbor : graph.get(cur[0])) {
                 if (!visited.contains(neighbor[0])) {

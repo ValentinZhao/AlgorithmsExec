@@ -15,6 +15,34 @@ package lc033;
  * 然后不断二分就可以了，这样就能找到最小值，获取偏移。
  * 获得偏移值后，我们可以通过上面的公式拿到任意位置的值，再次二分来找我们想要的那个target的位置
  */
+
+/**
+ * 非常棒的解法，one-pass，思路也非常清晰
+ * 作为此题的标准解法
+ */
+class Solution3 {
+    public int search(int[] nums, int target) {
+        int lo = 0, hi = nums.length - 1; // 注意这个部分，如果使用 lo <= hi 的二分搜索框架，上界是length-1而不是length！
+
+        while (lo <= hi) {
+            int mid = (hi - lo) / 2 + lo;
+
+            if (nums[mid] == target) return mid;
+            // 这个判断是说，左边的还是小于中间的，那么也就是说至少lo到mid这段是有序的，那么也就是说mid右边是rotated过的
+            else if (nums[lo] <= nums[mid]) {
+                // 那么左边既然有序，那么当target是在lo和mid中间的话，我们直接取左边这段，反之取右边
+                if (nums[lo] <= target && target < nums[mid]) hi = mid - 1;
+                else lo = mid + 1;
+            } else { // 这里的判断逻辑就都取反即可
+                if (nums[mid] < target && target <= nums[hi]) lo = mid + 1;
+                else hi = mid - 1;
+            }
+        }
+
+        return -1;
+    }
+}
+
 public class Solution033 {
     public int search (int[] nums, int target) {
         int start = 0;
