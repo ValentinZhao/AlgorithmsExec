@@ -9,40 +9,82 @@ import static com.neu.cs5800.utils.Utils.isInteger;
 
 public class Main {
     public static void main(String[] args) {
-//        int[] caps = new int[]{127, 257, 509, 1021, 2053, 4099, 8191};
-//
-//
-//        for (int i = 0; i < 1; i++) {
-//            int cap = 8191;
-//
-//            LinearProbingHashTable lp = new LinearProbingHashTable(8191);
-////            DoubleHashingHashTable dh = new DoubleHashingHashTable(cap);
-//            int seed = 10000;
-//
-//            try {
-//                Random random = new Random();
-//                while (true) {
-//                    lp.insert(String.valueOf(random.nextInt(seed)), "texts");
-////                    dh.insert(String.valueOf(random.nextInt(seed)), 111);
-//                }
-//
-//            } catch (Exception e) {
-//                System.out.println("当前cap：" + cap);
-////                System.out.println("当前元素数：" + lp.getSize());
-////                System.out.println("当前load：" + lp.getSize() / cap);
-//            }
-//
-//            String[] keys = lp.getKeys();
-//
-//            for (int j = 0; j < keys.length; j++) {
-//                System.out.println("当前key：" + keys[j]);
-//                lp.get(keys[j]);
-//            }
-//            System.out.println("当前map：" + lp.getMap());
-//
-//        }
+//        preprocessBook();
+        indexMoby();
+        patternMatch();
+    }
+
+    private static void indexMoby() {
+        InvertedIndex invertedIndex = new InvertedIndex();
+
+//        long start = System.currentTimeMillis();
+        invertedIndex.buildIndices("/Users/codemao/zzl/neu-course-materials/cs5800/Assignments/moby.txt", 10888);
+//        long end = System.currentTimeMillis();
+//        System.out.println("Time of indexing: " + (end - start));
+
+        long start = System.nanoTime();
+        invertedIndex.search("ship");
+        long end = System.nanoTime();
+        System.out.println("Time of indexing: " + (end - start));
+    }
 
 
+    private static void preprocessBook() {
+        try {
+            BufferedReader buffMoby = new BufferedReader(new FileReader("/Users/codemao/zzl/neu-course-materials/cs5800/Assignments/mobydick.txt"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/codemao/zzl/neu-course-materials/cs5800/Assignments/moby.txt"));
+            String line = buffMoby.readLine();
+            while (line != null) {
+                line = line.toLowerCase();
+                line = line.replaceAll("[^a-zA-Z ]", "").toLowerCase();
+                writer.write(line);
+                writer.newLine();
+                line = buffMoby.readLine();
+            }
+            writer.close();
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void testHashing() {
+        int[] caps = new int[]{127, 257, 509, 1021, 2053, 4099, 8191};
+
+
+        for (int i = 0; i < 1; i++) {
+            int cap = 8191;
+
+            LinearProbingHashTable lp = new LinearProbingHashTable(8191);
+            DoubleHashingHashTable dh = new DoubleHashingHashTable(cap);
+            int seed = 10000;
+
+            try {
+                Random random = new Random();
+                while (true) {
+                    lp.insert(String.valueOf(random.nextInt(seed)), "texts");
+                    dh.insert(String.valueOf(random.nextInt(seed)), 111);
+                }
+
+            } catch (Exception e) {
+                System.out.println("current cap：" + cap);
+            }
+
+            String[] keys = lp.getKeys();
+
+            for (int j = 0; j < keys.length; j++) {
+                System.out.println("current key：" + keys[j]);
+                lp.get(keys[j]);
+            }
+            System.out.println("current map：" + lp.getMap());
+
+        }
+    }
+
+    private static void searchPoems() {
         InvertedIndex invertedIndex = new InvertedIndex();
         readAllDocs(invertedIndex);
         String word;
@@ -191,15 +233,20 @@ public class Main {
     private static void testMultipleMatchingOnMoby(String novel, String[][] dict) {
         TextSearch ts = new TextSearch();
 
-        for (int i = 0; i < 10; i++) {
-            long start = System.currentTimeMillis();
-            for (int j = 0; j < 100; j++) {
-                ts.naiveSearch(novel, dict[i][j]);
-            }
-            long end = System.currentTimeMillis();
-            System.out.print("Word Length：" + (i+1) + " ");
-            System.out.println("Time Consuming：" + (end - start));
-        }
+        long start = System.currentTimeMillis();
+//        for (int i = 0; i < 1; i++) {
+//            int wordLen = new Random().nextInt(10);
+//            int wordC = new Random().nextInt(100);
+//
+//            for (int j = 0; j < 1; j++) {
+//                ts.bmhsSearch(novel, "treenail");
+//                System.out.println("Word selected：" + dict[wordLen][wordC] + " ");
+//            }
+//        }
+        ts.bmhsSearch(novel, "ship");
+        long end = System.currentTimeMillis();
+
+        System.out.println("Time Consuming：" + (end - start));
     }
 
     private static String[][] generateRandomDict(PriorityQueue<String> pq) {
