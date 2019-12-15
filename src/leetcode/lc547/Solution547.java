@@ -28,3 +28,59 @@ public class Solution547 {
         }
     }
 }
+
+// union-find 简洁写法
+class Solution {
+    public int findCircleNum(int[][] M) {
+        int n = M.length;
+        UnionFind un = new UnionFind(n);
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (M[i][j] == 1) {
+                    un.union(i, j);
+                }
+            }
+        }
+
+        return un.getCount();
+    }
+
+    class UnionFind {
+
+        private int count;
+        private int[] parent;
+
+        public UnionFind(int n) {
+            count = n;
+            parent = new int[n];
+
+            for (int i = 0; i < n; i++) {
+                parent[i] = i;
+            }
+        }
+
+        public void union(int i, int j) {
+            int rootI = find(i);
+            int rootJ = find(j);
+
+            if (rootI == rootJ) return;
+
+            count--;
+            parent[rootI] = rootJ;
+        }
+
+        public int find(int i) {
+            if (parent[i] != i) {
+                parent[i] = find(parent[i]);
+                i = parent[i];
+            }
+
+            return parent[i];
+        }
+
+        public int getCount() {
+            return this.count;
+        }
+    }
+}
