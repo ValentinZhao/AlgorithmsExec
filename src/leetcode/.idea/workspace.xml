@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lc547/Solution547.java" beforeDir="false" afterPath="$PROJECT_DIR$/lc547/Solution547.java" afterDir="false" />
-    </list>
+    <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,32 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lc889/Solution889.java">
+        <entry file="file://$PROJECT_DIR$/lc056/Solution056.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lc865/Solution865.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-              <folding>
-                <element signature="e#152#153#0" expanded="true" />
-                <element signature="e#199#200#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lc727/Solution727.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="625">
+              <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -86,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lc547/Solution547.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+            <state relative-caret-position="399">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#1964#1965#0" expanded="true" />
                 <element signature="e#1996#1997#0" expanded="true" />
@@ -100,10 +75,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lc253/Solution253.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="41" column="57" lean-forward="true" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lc435/Solution435.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" selection-start-line="5" selection-end-line="20" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lc721/Solution721.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="424">
-              <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+              <caret line="164" selection-start-line="164" selection-end-line="164" />
             </state>
           </provider>
         </entry>
@@ -128,9 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>inorder</find>
-      <find>data</find>
-      <find>min</find>
       <find>insert</find>
       <find>size</find>
       <find>deserialize</find>
@@ -158,6 +148,9 @@
       <find>disjoint</find>
       <find>bellman</find>
       <find>union find</find>
+      <find>meeting</find>
+      <find>Arrays.sort</find>
+      <find>[]</find>
     </findStrings>
     <replaceStrings>
       <replace>col * row</replace>
@@ -210,6 +203,8 @@
         <option value="$PROJECT_DIR$/lc156/Solution156.java" />
         <option value="$PROJECT_DIR$/lc166/Solution166.java" />
         <option value="$PROJECT_DIR$/lc547/Solution547.java" />
+        <option value="$PROJECT_DIR$/lc056/Solution056.java" />
+        <option value="$PROJECT_DIR$/lc435/Solution435.java" />
       </list>
     </option>
   </component>
@@ -438,13 +433,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lc549/Solution549.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lc329/Solution329.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -694,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lc253/Solution253.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lc540/Solution540.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -719,13 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lc056/Solution056.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -792,18 +766,39 @@
     <entry file="file://$PROJECT_DIR$/lc721/Solution721.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
-          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lc547/Solution547.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        <state relative-caret-position="399">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#1964#1965#0" expanded="true" />
             <element signature="e#1996#1997#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lc056/Solution056.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lc253/Solution253.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="41" column="57" lean-forward="true" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lc435/Solution435.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
