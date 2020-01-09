@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * low[u] records the lowest vertex u can reach
- * he value low[v] indicates earliest visited vertex reachable from subtree rooted with v.
+ * The value low[v] indicates earliest visited vertex reachable from subtree rooted with v.
  * The condition for an edge (u, v) to be a bridge is, “low[v] > disc[u]”.
  *
  * disc[u] records the time when u was discovered（这个time不是次数，就是发现时的时间，我们用"步数"来表示这种时间）
