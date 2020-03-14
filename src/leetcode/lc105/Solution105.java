@@ -31,18 +31,22 @@ public class Solution105 {
 
 class Solution {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        return buildTreeHelper(0, 0, inorder.length - 1, preorder, inorder);
+        return helper(0, 0, inorder.length - 1, preorder, inorder);
     }
 
-    private TreeNode buildTreeHelper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
-        if (preStart > preorder.length - 1 || inStart > inEnd) return null;
+    private TreeNode helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
+        if (preStart > preorder.length || inStart > inEnd) return null;
+
         int inIndex = 0;
-        TreeNode root = new TreeNode(preorder[preStart]);
         for (int i = 0; i < inorder.length; i++) {
-            if (inorder[i] == root.val) inIndex = i;
+            if (inorder[i] == preorder[preStart]) inIndex = i;
         }
-        root.left = buildTreeHelper(preStart + 1, inStart, inIndex - 1, preorder, inorder);
-        root.right = buildTreeHelper(preStart + (inIndex - inStart + 1), inIndex + 1, inEnd, preorder, inorder);
+
+        TreeNode root = new TreeNode(inorder[inIndex]);
+        root.left = helper(preStart+1, inStart, inIndex-1, preorder, inorder);
+        root.right = helper(preStart + inIndex - inStart + 1, inIndex + 1, inEnd, preorder, inorder);
+
         return root;
     }
+
 }
