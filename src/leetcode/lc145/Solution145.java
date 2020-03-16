@@ -39,6 +39,8 @@ public class Solution145 {
                 result.add(p.val);  // Add before going to children
                 p = p.left;
             } else {
+                // 其实前序和中序几乎一样，pop出来的node其实就是上一层的根节点
+                // 往左没得走了，就把根pop出来，往右走（把右子树给到cursor）
                 TreeNode node = stack.pop();
                 p = node.right;
             }
