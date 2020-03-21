@@ -1,8 +1,9 @@
 package lc123;
 
 /**
- * 其实就是多次计算手里还有多少钱，其中buy1，buy2都有可能是负数，这时候是指买入后手里还有余钱
- * 这时候price-buy1 price-buy2其实就是卖出价加上手里的余额
+ * 我们首先疯狂寻找第一次购买可以到达的最大利润，就像该系列的第一题一样
+ * 之后很trick的是，我们把第一次的利润尽量作为第二次购买的一部分成本来抵掉（这就是为什么15行我们当前购买的price其实是price-sell1）
+ * 并通过max和min函数来尽量的达到另一个最大利润
  */
 public class Solution123 {
     public int maxProfit(int[] prices) {
