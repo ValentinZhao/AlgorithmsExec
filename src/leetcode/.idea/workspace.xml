@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,7 @@
       <recent name="lc843" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyCAS">
+  <component name="RunManager" selected="Application.lcProj_conf">
     <configuration name="LongestCommonSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -232,10 +233,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1593472390168">
+    <state x="649" y="238" width="600" height="486" key="find.popup" timestamp="1593473866287">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593472390168" />
+    <state x="649" y="238" width="600" height="486" key="find.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593473866287" />
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1593473844800">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593473844800" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -244,6 +249,11 @@
           <url>file://$PROJECT_DIR$/lc547/Solution547.java</url>
           <line>21</line>
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
