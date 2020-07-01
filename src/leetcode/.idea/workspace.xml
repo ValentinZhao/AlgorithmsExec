@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lc50/Solution50.java" beforeDir="false" afterPath="$PROJECT_DIR$/lc50/Solution50.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +40,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="176" />
-    <option name="y" value="50" />
-    <option name="width" value="1636" />
-    <option name="height" value="885" />
   </component>
   <component name="ProjectId" id="1T3EQONake1tNJxpN7dm4bzl2Ge" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -226,10 +221,10 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="649" y="238" width="600" height="486" key="find.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593473866287" />
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1593474310340">
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1593556029607">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593474310340" />
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593556029607" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
