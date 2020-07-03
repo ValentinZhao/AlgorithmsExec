@@ -2,6 +2,7 @@ package lc169;
 
 /**
  * 求众数，moore voting
+ * 关键字关联 摩尔选举 摩尔投票
  */
 public class Solution169 {
     public int majorityElement(int[] nums) {

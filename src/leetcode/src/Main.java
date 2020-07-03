@@ -2,14 +2,15 @@ package src;
 
 
 import TreeNode.TreeNode;
-import jianzhi.Jz02;
+import jianzhi.Jz27;
 import lc002.Solution002.ListNode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main (String[] args) {
-//        TreeNode root = generateSampleTreeNode();
-//        Solution173.BSTIterator solution = new Solution173.BSTIterator(root);
-//        Solution126 solution = new Solution126();
+        TreeNode root = generateSampleTreeNode();
         int[] data = new int[]{-2,1,2,-2,1,2};
 //        String data = "2*3-4*5";
         int[][] matrix = new int[][]{{1,1,1},{1,1,0},{1,0,1}};
@@ -20,13 +21,12 @@ public class Main {
         char[] datas = new char[]{'A','A','A','B','B','B'};
 //        Arrays.sort(str_arr);
         int test_int = 3;
-        Jz02 jz02 = new Jz02();
-        String res = jz02.replaceSpace(new StringBuffer("s d ds s"));
-        ListNode l1 = generateSampleListNode();
 //        ListNode l2 = generateSampleListNode();
+        Jz27 jz27 = new Jz27();
+        ArrayList<String> res = jz27.Permutation("abc");
 //        ListNode res = solution.addTwoNumbers(l1, l2);
 //        String result = solution.findReplaceString("jjievdtjfb", new int[]{4,6,1}, new String[]{"md","tjgb","jf"}, new String[]{"foe", "oov", "e"});
-//        System.out.println("Input =====> " + Arrays.toString(datas));
+        System.out.println("Input =====> " + Arrays.toString(datas));
 //        System.out.println("Input =====> " + Arrays.toString(matrix));
 //        AllSubsequence all = new AllSubsequence();
 //        List<List<String>> res = solution.findLadders("hit", "cog", new HashSet<>(Arrays.asList("hot","dot","dog","lot","log","cog")));

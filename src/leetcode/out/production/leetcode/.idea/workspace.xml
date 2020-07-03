@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/src/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,56 +39,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>dij</find>
-      <find>rob</find>
-      <find>bike</find>
-      <find>772</find>
-      <find>TrieNode</find>
-      <find>dict</find>
-      <find>dirs</find>
-      <find>generatep</find>
-      <find>deep</find>
-      <find>disjoint</find>
-      <find>bellman</find>
-      <find>union find</find>
-      <find>meeting</find>
-      <find>Arrays.sort</find>
-      <find>[]</find>
-      <find>calculator</find>
-      <find>tactoe</find>
-      <find>最长递增</find>
-      <find>LRU</find>
-      <find>reverse</find>
-      <find>maximum</find>
-      <find>binarySearch</find>
-      <find>HashMap</find>
-      <find>rehash</find>
-      <find>rehash</find>
-      <find>permuta</find>
-      <find>permutation</find>
-      <find>invert</find>
-      <find>resize</find>
-      <find>nextGre</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>col * row</replace>
-      <replace>{</replace>
-      <replace>}</replace>
-      <replace>head</replace>
-      <replace>nums</replace>
-      <replace>Math.min</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="176" />
-    <option name="y" value="50" />
-    <option name="width" value="1636" />
-    <option name="height" value="885" />
   </component>
   <component name="ProjectId" id="1T3EQONake1tNJxpN7dm4bzl2Ge" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -194,6 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1546683868680</updated>
       <workItem from="1593472354147" duration="662000" />
+      <workItem from="1593661353296" duration="3058000" />
     </task>
     <servers />
   </component>
@@ -233,14 +187,50 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="446" height="464" key="DebuggerActiveHint" timestamp="1593646713996">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="446" height="464" key="DebuggerActiveHint/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593646713996" />
+    <state width="1600" height="236" key="GridCell.Tab.0.bottom" timestamp="1593650560910">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="1600" height="236" key="GridCell.Tab.0.bottom/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593650560910" />
+    <state width="1600" height="236" key="GridCell.Tab.0.center" timestamp="1593650560909">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="1600" height="236" key="GridCell.Tab.0.center/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593650560909" />
+    <state width="1600" height="236" key="GridCell.Tab.0.left" timestamp="1593650560908">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="1600" height="236" key="GridCell.Tab.0.left/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593650560908" />
+    <state width="1600" height="236" key="GridCell.Tab.0.right" timestamp="1593650560909">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="1600" height="236" key="GridCell.Tab.0.right/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593650560909" />
+    <state width="1600" height="236" key="GridCell.Tab.1.bottom" timestamp="1593650560911">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="1600" height="236" key="GridCell.Tab.1.bottom/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593650560911" />
+    <state width="1600" height="236" key="GridCell.Tab.1.center" timestamp="1593650560911">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="1600" height="236" key="GridCell.Tab.1.center/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593650560911" />
+    <state width="1600" height="236" key="GridCell.Tab.1.left" timestamp="1593650560910">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="1600" height="236" key="GridCell.Tab.1.left/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593650560910" />
+    <state width="1600" height="236" key="GridCell.Tab.1.right" timestamp="1593650560911">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state width="1600" height="236" key="GridCell.Tab.1.right/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593650560911" />
     <state x="649" y="238" width="600" height="486" key="find.popup" timestamp="1593473866287">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="649" y="238" width="600" height="486" key="find.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593473866287" />
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1593473844800">
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1593729779822">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593473844800" />
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593729779822" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -249,11 +239,6 @@
           <url>file://$PROJECT_DIR$/lc547/Solution547.java</url>
           <line>21</line>
           <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
