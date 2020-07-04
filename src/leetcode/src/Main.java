@@ -2,10 +2,9 @@ package src;
 
 
 import TreeNode.TreeNode;
-import jianzhi.Jz27;
+import jianzhi.Jz37;
 import lc002.Solution002.ListNode;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -22,8 +21,8 @@ public class Main {
 //        Arrays.sort(str_arr);
         int test_int = 3;
 //        ListNode l2 = generateSampleListNode();
-        Jz27 jz27 = new Jz27();
-        ArrayList<String> res = jz27.Permutation("abc");
+        Jz37 jz27 = new Jz37();
+        int res = jz27.GetNumberOfK(new int[]{1,2,4,4,5,5,5,6,6,8,9,9}, 9);
 //        ListNode res = solution.addTwoNumbers(l1, l2);
 //        String result = solution.findReplaceString("jjievdtjfb", new int[]{4,6,1}, new String[]{"md","tjgb","jf"}, new String[]{"foe", "oov", "e"});
         System.out.println("Input =====> " + Arrays.toString(datas));
