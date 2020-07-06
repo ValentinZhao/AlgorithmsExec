@@ -22,6 +22,7 @@ public class Solution239 {
                 q.poll();
             }
             // remove smaller numbers in k range as they are useless
+            // 这保证了q里面是个递减的序列，所以最后复制到结果数组时是采用队列头的索引
             while (!q.isEmpty() && a[q.peekLast()] < a[i]) {
                 q.pollLast();
             }

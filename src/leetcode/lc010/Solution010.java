@@ -7,6 +7,8 @@ package lc010;
  *
  * https://blog.csdn.net/hk2291976/article/details/51165010
  */
+
+// 这个跑不过
 public class Solution010 {
     public boolean isMatch(String s, String p) {
         if (s == null || p == null) return false;
