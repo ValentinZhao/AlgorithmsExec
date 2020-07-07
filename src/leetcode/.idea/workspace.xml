@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jianzhi/Jz42.java" beforeDir="false" afterPath="$PROJECT_DIR$/jianzhi/Jz42.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lc010/Solution010.java" beforeDir="false" afterPath="$PROJECT_DIR$/lc010/Solution010.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lc239/Solution239.java" beforeDir="false" afterPath="$PROJECT_DIR$/lc239/Solution239.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1546683868680</updated>
       <workItem from="1593472354147" duration="662000" />
-      <workItem from="1593661353296" duration="35058000" />
+      <workItem from="1593661353296" duration="45448000" />
     </task>
     <servers />
   </component>
@@ -224,14 +221,18 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state width="1600" height="236" key="GridCell.Tab.1.right/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593855624450" />
+    <state x="243" y="138" width="1442" height="717" key="dock-window-1" timestamp="1594086700205">
+      <screen x="0" y="23" width="1920" height="983" />
+    </state>
+    <state x="243" y="138" width="1442" height="717" key="dock-window-1/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594086700205" />
     <state x="649" y="238" width="600" height="486" key="find.popup" timestamp="1593938004028">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="649" y="238" width="600" height="486" key="find.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593938004028" />
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1593942184959">
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1594086559339">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593942184959" />
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594086559339" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
