@@ -52,13 +52,16 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bytedance/leetcode" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bytedance/leetcode" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="lc843" />
     </key>
@@ -146,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1546683868680</updated>
       <workItem from="1593472354147" duration="662000" />
-      <workItem from="1593661353296" duration="60496000" />
+      <workItem from="1593661353296" duration="60975000" />
     </task>
     <servers />
   </component>
@@ -234,10 +237,10 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="649" y="238" width="600" height="486" key="find.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594091364127" />
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1594288409578">
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1594288805546">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594288409578" />
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594288805546" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
