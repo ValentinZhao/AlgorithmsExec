@@ -34,6 +34,8 @@ class Solution3 {
                 if (nums[lo] <= target && target < nums[mid]) hi = mid - 1;
                 else lo = mid + 1;
             } else { // 这里的判断逻辑就都取反即可
+                // 这时候其实是比如旋转了很少一部分到前面（那前面的值是很大的），target没有nums[lo]大，这时候target很有可能在后半段
+                // 这样的话就要和nums[hi]来比较
                 if (nums[mid] < target && target <= nums[hi]) lo = mid + 1;
                 else hi = mid - 1;
             }
