@@ -65,7 +65,7 @@
       <recent name="lc843" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.lcProj_conf">
+  <component name="RunManager" selected="Application.LongestCommonSequence">
     <configuration name="LongestCommonSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -129,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LongestCommonSequence" />
         <item itemvalue="Application.MyCAS" />
         <item itemvalue="Application.ProducerAndConsumer" />
         <item itemvalue="Application.LongestRhythm" />
         <item itemvalue="Application.SwapInPlace" />
-        <item itemvalue="Application.LongestCommonSequence" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +149,8 @@
       <updated>1546683868680</updated>
       <workItem from="1593472354147" duration="662000" />
       <workItem from="1593661353296" duration="79330000" />
+      <workItem from="1594608627472" duration="2485000" />
+      <workItem from="1594680687212" duration="4921000" />
     </task>
     <servers />
   </component>
@@ -192,22 +194,22 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state width="446" height="464" key="DebuggerActiveHint/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593646713996" />
-    <state width="1600" height="236" key="GridCell.Tab.0.bottom" timestamp="1594608613429">
+    <state width="1600" height="242" key="GridCell.Tab.0.bottom" timestamp="1594686661587">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state width="1600" height="236" key="GridCell.Tab.0.bottom/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594608613429" />
-    <state width="1600" height="236" key="GridCell.Tab.0.center" timestamp="1594608613428">
+    <state width="1600" height="242" key="GridCell.Tab.0.bottom/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686661587" />
+    <state width="1600" height="242" key="GridCell.Tab.0.center" timestamp="1594686661586">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state width="1600" height="236" key="GridCell.Tab.0.center/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594608613428" />
-    <state width="1600" height="236" key="GridCell.Tab.0.left" timestamp="1594608613428">
+    <state width="1600" height="242" key="GridCell.Tab.0.center/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686661586" />
+    <state width="1600" height="242" key="GridCell.Tab.0.left" timestamp="1594686661585">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state width="1600" height="236" key="GridCell.Tab.0.left/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594608613428" />
-    <state width="1600" height="236" key="GridCell.Tab.0.right" timestamp="1594608613429">
+    <state width="1600" height="242" key="GridCell.Tab.0.left/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686661585" />
+    <state width="1600" height="242" key="GridCell.Tab.0.right" timestamp="1594686661586">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state width="1600" height="236" key="GridCell.Tab.0.right/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594608613429" />
+    <state width="1600" height="242" key="GridCell.Tab.0.right/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686661586" />
     <state width="1600" height="236" key="GridCell.Tab.1.bottom" timestamp="1594608613431">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
@@ -236,10 +238,10 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="649" y="238" width="600" height="486" key="find.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594444379111" />
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1594466013923">
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1594687239748">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594466013923" />
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594687239748" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
