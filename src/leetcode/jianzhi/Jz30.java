@@ -20,7 +20,7 @@ public class Jz30 {
         dp[0] = array[0];
         int max = dp[0];
         for (int i = 1; i < n; i++) {
-            dp[i] = array[i] + (dp[i - 1] > 0 ? dp[i - 1] : 0);
+            dp[i] = array[i] + (Math.max(dp[i - 1], 0));
             max = Math.max(dp[i], max);
         }
         return max;

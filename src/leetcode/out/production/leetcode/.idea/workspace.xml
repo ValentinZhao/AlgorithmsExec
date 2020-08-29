@@ -20,8 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="841e726d-e803-4152-a40a-282c8fef04b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytedance/MyCAS.java" beforeDir="false" afterPath="$PROJECT_DIR$/bytedance/MyCAS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bytedance/TwoStacksQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/bytedance/TwoStacksQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jianzhi/Jz13.java" beforeDir="false" afterPath="$PROJECT_DIR$/jianzhi/Jz13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jianzhi/Jz18.java" beforeDir="false" afterPath="$PROJECT_DIR$/jianzhi/Jz18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jianzhi/Jz24.java" beforeDir="false" afterPath="$PROJECT_DIR$/jianzhi/Jz24.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jianzhi/Jz30.java" beforeDir="false" afterPath="$PROJECT_DIR$/jianzhi/Jz30.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jianzhi/Jz49.java" beforeDir="false" afterPath="$PROJECT_DIR$/jianzhi/Jz49.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jianzhi/Jz56.java" beforeDir="false" afterPath="$PROJECT_DIR$/jianzhi/Jz56.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/lc017/Solution017.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/lc017/Solution017.class" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +69,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -65,9 +79,21 @@
       <recent name="lc843" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LongestCommonSequence">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.QuickSort">
     <configuration name="LongestCommonSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="alibaba.LongestCommonSequence" />
       <module name="leetcode" />
@@ -102,11 +128,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SwapInPlace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="alibaba.SwapInPlace" />
+      <option name="MAIN_CLASS_NAME" value="bytedance.QuickSort" />
       <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bytedance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,13 +159,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.lcProj_conf" />
+      <item itemvalue="Application.LongestCommonSequence" />
+      <item itemvalue="Application.LongestRhythm" />
+      <item itemvalue="Application.MyCAS" />
+      <item itemvalue="Application.ProducerAndConsumer" />
+      <item itemvalue="Application.QuickSort" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.QuickSort" />
         <item itemvalue="Application.LongestCommonSequence" />
         <item itemvalue="Application.MyCAS" />
         <item itemvalue="Application.ProducerAndConsumer" />
         <item itemvalue="Application.LongestRhythm" />
-        <item itemvalue="Application.SwapInPlace" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +190,7 @@
       <workItem from="1593472354147" duration="662000" />
       <workItem from="1593661353296" duration="79330000" />
       <workItem from="1594608627472" duration="2485000" />
-      <workItem from="1594680687212" duration="3321000" />
+      <workItem from="1594680687212" duration="4921000" />
     </task>
     <servers />
   </component>
@@ -168,7 +208,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -187,29 +229,28 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state width="446" height="464" key="DebuggerActiveHint" timestamp="1593646713996">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state width="446" height="464" key="DebuggerActiveHint/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1593646713996" />
-    <state width="1600" height="236" key="GridCell.Tab.0.bottom" timestamp="1594608613429">
+    <state width="1600" height="242" key="GridCell.Tab.0.bottom" timestamp="1594686661587">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state width="1600" height="236" key="GridCell.Tab.0.bottom/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594608613429" />
-    <state width="1600" height="236" key="GridCell.Tab.0.center" timestamp="1594608613428">
+    <state width="1600" height="242" key="GridCell.Tab.0.bottom/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686661587" />
+    <state width="1600" height="242" key="GridCell.Tab.0.center" timestamp="1594686661586">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state width="1600" height="236" key="GridCell.Tab.0.center/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594608613428" />
-    <state width="1600" height="236" key="GridCell.Tab.0.left" timestamp="1594608613428">
+    <state width="1600" height="242" key="GridCell.Tab.0.center/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686661586" />
+    <state width="1600" height="242" key="GridCell.Tab.0.left" timestamp="1594686661585">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state width="1600" height="236" key="GridCell.Tab.0.left/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594608613428" />
-    <state width="1600" height="236" key="GridCell.Tab.0.right" timestamp="1594608613429">
+    <state width="1600" height="242" key="GridCell.Tab.0.left/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686661585" />
+    <state width="1600" height="242" key="GridCell.Tab.0.right" timestamp="1594686661586">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state width="1600" height="236" key="GridCell.Tab.0.right/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594608613429" />
+    <state width="1600" height="242" key="GridCell.Tab.0.right/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686661586" />
     <state width="1600" height="236" key="GridCell.Tab.1.bottom" timestamp="1594608613431">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
@@ -238,10 +279,10 @@
       <screen x="0" y="23" width="1920" height="983" />
     </state>
     <state x="649" y="238" width="600" height="486" key="find.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594444379111" />
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1594686304904">
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1594687239748">
       <screen x="0" y="23" width="1920" height="983" />
     </state>
-    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594686304904" />
+    <state x="614" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1920.983/1920.23.1680.1027@0.23.1920.983" timestamp="1594687239748" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

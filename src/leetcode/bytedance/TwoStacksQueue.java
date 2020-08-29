@@ -1,7 +1,5 @@
 package bytedance;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -14,12 +12,12 @@ public class TwoStacksQueue {
         stack1.push(node);
     }
 
-    public int pop() throws InvalidArgumentException {
+    public int pop() {
         if (stack2.isEmpty()) {
             while (!stack1.isEmpty()) stack2.push(stack1.pop());
         }
 
-        if (stack2.isEmpty()) throw new InvalidArgumentException(new String[]{"Queue is empty!"});
+        if (stack2.isEmpty()) System.exit(0);
 
         return stack2.pop();
     }

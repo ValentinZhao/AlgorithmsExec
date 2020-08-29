@@ -18,4 +18,16 @@ public class Jz18 {
         if(root.right != null)
             Mirror(root.right);
     }
+
+    public void Mirror1(TreeNode root) {
+        if (root == null) return;
+        if (root.left == null && root.right == null) return;
+
+        TreeNode tmp = root.left;
+        root.left = root.right;
+        root.right = tmp;
+
+        if (root.left != null) Mirror1(root.left);
+        if (root.right != null) Mirror1(root.right);
+    }
 }
