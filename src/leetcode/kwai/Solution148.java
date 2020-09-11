@@ -1,19 +1,37 @@
-package lc148;
+package kwai;
 
 import ListNode.ListNode;
 
-/**
- * 规定了时间复杂度为O(nlogn)的话其实就是考归并排序啦，归并排序的简介讲解在这里
- *
- * https://www.cnblogs.com/chengxiao/p/6194356.html
- *
- * 由于现在是链表，我们分成两段的方式就是用快慢指针来找中间点，然后把prev.next = null即可断开
- *
- * 还有快排思路：https://leetcode.com/problems/sort-list/discuss/345674/java-quick-sort
- */
-
 public class Solution148 {
     public ListNode sortList(ListNode head) {
+        quickSort(head, null);
+        return head;
+    }
+
+    private void quickSort(ListNode head, ListNode tail) {
+        if (head == tail) return;
+        ListNode slow = head, fast = head.next;
+        int pivot = head.val;
+        while (fast != tail) {
+            if (fast.val < pivot) {
+                slow = slow.next;
+                swap(slow, fast);
+            }
+            fast = fast.next;
+        }
+
+        swap(head, slow);
+        quickSort(head, slow);
+        quickSort(slow.next, tail);
+    }
+
+    private void swap(ListNode n1, ListNode n2) {
+        int tmp = n1.val;
+        n1.val = n2.val;
+        n2.val = tmp;
+    }
+
+    public ListNode sortList1(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode prev = null, slow = head, fast = head;
         while (fast != null && fast.next != null) {
@@ -22,12 +40,13 @@ public class Solution148 {
             fast = fast.next.next;
         }
         prev.next = null;
-        ListNode l1 = sortList(head);
-        ListNode l2 = sortList(slow);
-        return mergeList(l1, l2);
+        ListNode l1 = sortList1(head);
+        ListNode l2 = sortList1(slow);
+
+        return merge(l1, l2);
     }
 
-    private ListNode mergeList(ListNode l1, ListNode l2) {
+    private ListNode merge(ListNode l1, ListNode l2) {
         ListNode pseudoHead = new ListNode(0), cursorNode = pseudoHead;
         while (l1 != null && l2 != null) {
             if (l1.val > l2.val) {

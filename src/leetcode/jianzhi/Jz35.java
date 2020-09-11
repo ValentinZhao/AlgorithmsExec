@@ -2,61 +2,43 @@ package jianzhi;
 
 public class Jz35 {
     public int InversePairs(int [] array) {
-        if(array==null||array.length==0)
-        {
+        int len = array.length;
+        if(array== null || len <= 0){
             return 0;
         }
-        int[] copy = new int[array.length];
-        for(int i=0;i<array.length;i++)
-        {
-            copy[i] = array[i];
-        }
-        int count = InversePairsCore(array,copy,0,array.length-1);//数值过大求余
-        return count;
+        return mergeSort(array, 0, len-1);
     }
-
-    private int InversePairsCore(int[] array,int[] copy,int low,int high)
-    {
-        if(low==high)
-        {
+    public int mergeSort(int [] array, int start, int end){
+        if(start == end)
             return 0;
-        }
-        int mid = (low+high)>>1;
-        int leftCount = InversePairsCore(array,copy,low,mid)%1000000007;
-        int rightCount = InversePairsCore(array,copy,mid+1,high)%1000000007;
+        int mid = (start + end) / 2;
+        int left_count = mergeSort(array, start, mid);
+        int right_count = mergeSort(array, mid + 1, end);
+        int i = mid, j = end;
+        int [] copy = new int[end - start + 1];
+        int copy_index = end - start;
         int count = 0;
-        int i=mid;
-        int j=high;
-        int locCopy = high;
-        while(i>=low&&j>mid)
-        {
-            if(array[i]>array[j])
-            {
-                count += j-mid;
-                copy[locCopy--] = array[i--];
-                if(count>=1000000007)//数值过大求余
-                {
-                    count%=1000000007;
-                }
-            }
-            else
-            {
-                copy[locCopy--] = array[j--];
+        while(i >= start && j >= mid + 1) {
+            if (array[i] > array[j]) {
+                copy[copy_index--] = array[i--];
+                count += j - mid;
+                if(count > 1000000007) count %= 1000000007;
+            }else{
+                copy[copy_index--] = array[j--];
             }
         }
-        for(;i>=low;i--)
-        {
-            copy[locCopy--]=array[i];
+        // 以下两个while只会执行一个，由上一个while的条件就知道了
+        while(i >= start){
+            copy[copy_index--] = array[i--];
         }
-        for(;j>mid;j--)
-        {
-            copy[locCopy--]=array[j];
+        while(j >= mid + 1){
+            copy[copy_index--] = array[j--];
         }
-        for(int s=low;s<=high;s++)
-        {
-            array[s] = copy[s];
+        i = 0;
+        // 把copy的数据按照start到end复制回array
+        while(start <= end) {
+            array[start++] = copy[i++];
         }
-        return (leftCount+rightCount+count)%1000000007;
+        return (left_count+right_count+count)%1000000007;
     }
-
 }
